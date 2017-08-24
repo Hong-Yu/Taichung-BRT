@@ -1,0 +1,846 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <link href="TwMap.css" rel="stylesheet"/>
+
+    <script src="jquery-1.7.1.js"></script>
+    <script src="bus.js"></script>
+
+    <title>紅2 - 去程</title>
+</head>
+<body>
+<div class="map_container">
+<div class="banner">
+    <img src="/newmap/Content/images/banner.png" alt="logo" />
+</div>
+<div class="route_info_wrapper">
+    <div style="margin-top:10px; margin-bottom:10px">
+        <div class="rtTitlePanel">
+            <div style="background-color:#0099FF; padding-top:5px; padding-bottom:5px; font-size: 22px; font-weight: bold; color: #FFFF00;">
+                紅2
+            </div>
+        </div>
+    </div>
+    <div>
+        <div>
+            <table class="ib">
+                <tr>
+                    <td colspan="2" class="hd">
+                        <img src="/newmap/Content/images/標題箭頭.png" border="0" alt="arrow" />
+                        起訖站
+                    </td>
+                </tr>
+                <tr>
+                    <td class="lb">起　點:</td>
+                    <td class="rb">汐止社后</td>
+                </tr>
+                <tr>
+                    <td class="lb">訖　點:</td>
+                    <td class="rb">捷運圓山站</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="hd">
+                        <img src="/newmap/Content/images/標題箭頭.png" border="0" alt="arrow" />
+                        發車時間(平日)
+                    </td>
+                </tr>
+                <tr>
+                    <td class="lb">頭班車:</td>
+                    <td class="rb">05:50</td>
+                </tr>
+                <tr>
+                    <td class="lb">末班車:</td>
+                    <td class="rb">23:50</td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" class="hd">
+                        <img src="/newmap/Content/images/標題箭頭.png" border="0" alt="arrow" />
+                        發車時間(假日)
+                    </td>
+                </tr>
+                <tr>
+                    <td class="lb">頭班車:</td>
+                    <td class="rb">05:50</td>
+                </tr>
+                <tr>
+                    <td class="lb">末班車:</td>
+                    <td class="rb">23:50</td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" class="hd">
+                        <img src="/newmap/Content/images/標題箭頭.png" border="0" alt="arrow" />
+                        發車間距(平日)
+                    </td>
+                </tr>
+                <tr>
+                    <td class="lb">尖　峰:</td>
+                    <td class="rb">07-10 分</td>
+                </tr>
+                <tr>
+                    <td class="lb">離　峰:</td>
+                    <td class="rb">10-15 分</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="rb">22:00後15-20分</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="hd">
+                        <img src="/newmap/Content/images/標題箭頭.png" border="0" alt="arrow" />
+                        發車間距(例假日)
+                    </td>
+                </tr>
+                <tr>
+                    <td class="lb">尖　峰:</td>
+                    <td class="rb">12-15 分</td>
+                </tr>
+                <tr>
+                    <td class="lb">離　峰:</td>
+                    <td class="rb">12-15 分</td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td colspan="2" class="hd">
+                        <img src="/newmap/Content/images/標題箭頭.png" border="0" alt="arrow" />
+                        票價資訊
+                    </td>
+                </tr>
+                <tr>
+                    <td class="lb">票　價:</td>
+                    <td class="rb">一段票</td>
+                </tr>
+                <tr>
+                    <td class="lb">緩衝區:</td>
+                    <td class="rb"></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" class="hd">
+                        <img src="/newmap/Content/images/標題箭頭.png" border="0" alt="arrow" />
+                        服務專線
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="rb">光華巴士</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="rb">0800-002-277</td>
+                </tr>
+                <tr style="display:none">
+                    <td colspan="2" class="apts">
+                        立皓科技 規劃/設計
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="route_view_wrapper">
+<div class="route_view">
+<div class="left">
+                    <span style="background-color: #ffffff; font-size: 18px; font-weight: bold; color: #9900FF; padding-right:10px">
+                        <a href="/newmap/Tw/Map?rid=15312&amp;sec=0" style="text-decoration:none; margin-right:10px">
+                            <img src="/newmap/Content/images/icon_checkbox.gif" alt="Go" style="display:inline-block" />
+                            往&nbsp;捷運圓山站
+                        </a>
+                        <a href="/newmap/Tw/Map?rid=15312&amp;sec=1" style="text-decoration:none">
+                            <img src="/newmap/Content/images/icon_checkbox_off.gif" alt="Back" style="display:inline-block" />
+                            往&nbsp;汐止社后
+                        </a>
+                    </span>
+</div>
+<div class="left">
+    <a href="/newmap/Tw/ManualRouteMap?rid=15312" target="_blank">
+        <img src="/newmap/Content/images/示意圖.png" alt="示意圖" style="width:90px; height:25px; border:0" />
+    </a>
+    <a href="http://www.5284.com.tw/Dybus.aspx?Lang=&amp;Line=紅2" target="_blank">
+        <img src="/newmap/Content/images/街道圖.png" alt="街道圖" style="width:90px; height:25px; border:0" />
+    </a>
+</div>
+<div class="right" style="text-align:right">
+                    <span style="font-size: 12px; text-align:right">
+                        <img src="/newmap/Content/images/起訖.png" alt="起訖點" style="width:18px; height:18px" />
+                        <span style="padding-right: 10px">起訖點</span>
+                        <img src="/newmap/Content/images/站點.gif" alt="停靠站" style="width:18px; height:18px" />
+                        <span style="padding-right: 10px">停靠站</span>
+                        <img src="/newmap/Content/images/捷運圖示.gif" alt="捷運站" style="width:18px; height:18px" />
+                        <span style="padding-right: 10px">捷運站</span>
+                        <img src="/newmap/Content/images/一般公車向右.gif" alt="一般公車向右" style="width:20px; height:15px" />
+                        <span style="padding-right: 10px" class="bnh">一般公車</span>
+                        <img src="/newmap/Content/images/低地版公車向右.gif" alt="低地版公車向右" style="width:20px; height:15px" />
+                        <span class="bnl">低地版公車</span>
+                        <img src="/newmap/Content/images/復康巴士向右.gif" alt="低地版公車向右" style="width:20px; height:15px" />
+                        <span class="bnf">大復康巴士</span>
+                        <img src="/newmap/Content/images/panda.gif" alt="圓仔公車" style="width:20px; height:15px" />
+                        <span class="bno">圓仔公車</span>
+                        <span id="plLastUpdateTime" style="font-size: 12px; padding-left: 10px"></span>
+                    </span>
+</div>
+
+
+
+<div class="clear" style="border-bottom:1px solid black; margin-bottom:25px"></div>
+<div id="map" class="routeMap">
+
+
+<div class="stop left">
+    <div class="t sfont relative">
+        <div class="eta" id="etai_0"></div><div class="etaol" id="etao_0"></div>
+    </div>
+    <div class="m fill relative">
+        <div class="stopIconEnd"><div class="busl" id="busi_0"></div></div>
+        <div class="buslo" id="buso_0"></div>
+    </div>
+    <div class="b relative">
+        <div class="stopName"><span class="center">社后消防隊</span></div>
+    </div>
+</div>
+<div class="stop left">
+    <div class="t sfont relative">
+        <div class="eta" id="etai_1"></div><div class="etaol" id="etao_1"></div>
+    </div>
+    <div class="m fill relative">
+        <div class="stopIconR"><div class="busl" id="busi_1"></div></div>
+        <div class="buslo" id="buso_1"></div>
+    </div>
+    <div class="b relative">
+        <div class="stopName"><span class="center">世電社區</span></div>
+    </div>
+</div>
+<div class="stop left">
+    <div class="t sfont relative">
+        <div class="eta" id="etai_2"></div><div class="etaol" id="etao_2"></div>
+    </div>
+    <div class="m fill relative">
+        <div class="stopIconR"><div class="busl" id="busi_2"></div></div>
+        <div class="buslo" id="buso_2"></div>
+    </div>
+    <div class="b relative">
+        <div class="stopName"><span class="center">北峰里</span></div>
+    </div>
+</div>
+<div class="stop left">
+    <div class="t sfont relative">
+        <div class="eta" id="etai_3"></div><div class="etaol" id="etao_3"></div>
+    </div>
+    <div class="m fill relative">
+        <div class="stopIconR"><div class="busl" id="busi_3"></div></div>
+        <div class="buslo" id="buso_3"></div>
+    </div>
+    <div class="b relative">
+        <div class="stopName"><span class="center">金龍國小</span></div>
+    </div>
+</div>
+<div class="stop left">
+    <div class="t sfont relative">
+        <div class="eta" id="etai_4"></div><div class="etaol" id="etao_4"></div>
+    </div>
+    <div class="m fill relative">
+        <div class="stopIconR"><div class="busl" id="busi_4"></div></div>
+        <div class="buslo" id="buso_4"></div>
+    </div>
+    <div class="b relative">
+        <div class="stopName"><span class="center">木楠煤礦</span></div>
+    </div>
+</div>
+<div class="stop left">
+    <div class="t sfont relative">
+        <div class="eta" id="etai_5"></div><div class="etaol" id="etao_5"></div>
+    </div>
+    <div class="m fill relative">
+        <div class="stopIconR"><div class="busl" id="busi_5"></div></div>
+        <div class="buslo" id="buso_5"></div>
+    </div>
+    <div class="b relative">
+        <div class="stopName"><span class="center">經貿園區</span></div>
+    </div>
+</div>
+<div class="stop left">
+    <div class="t sfont relative">
+        <div class="eta" id="etai_6"></div><div class="etaol" id="etao_6"></div>
+    </div>
+    <div class="m fill relative">
+        <div class="stopIconR"><div class="busl" id="busi_6"></div></div>
+        <div class="buslo" id="buso_6"></div>
+    </div>
+    <div class="b relative">
+        <div class="stopName"><span class="center">北山里</span></div>
+    </div>
+</div>
+<div class="stop left">
+    <div class="t sfont relative">
+        <div class="eta" id="etai_7"></div><div class="etaol" id="etao_7"></div>
+    </div>
+    <div class="m fill relative">
+        <div class="stopIconR"><div class="busl" id="busi_7"></div></div>
+        <div class="buslo" id="buso_7"></div>
+    </div>
+    <div class="b relative">
+        <div class="stopName"><span class="center">東湖國小</span></div>
+    </div>
+</div>
+
+<div class="bar left">
+    <div class="t"></div>
+    <div class="m fill"></div>
+    <div class="b fill"></div>
+</div>
+
+<div class="clear"></div>
+<div class="bar right">
+    <div class="t fill"></div>
+    <div class="m fill"></div>
+    <div class="b"></div>
+</div>
+<div class="stop right">
+    <div class="t sfont relative">
+        <div class="eta" id="etai_8"></div><div class="etaor" id="etao_8"></div>
+    </div>
+    <div class="m fill relative">
+        <div class="stopIconL"><div class="busr" id="busi_8"></div></div>
+        <div class="busro" id="buso_8"></div>
+    </div>
+    <div class="b relative">
+        <div class="stopName"><span class="center">五分社區</span></div>
+    </div>
+</div>
+<div class="stop right">
+    <div class="t sfont relative">
+        <div class="eta" id="etai_9"></div><div class="etaor" id="etao_9"></div>
+    </div>
+    <div class="m fill relative">
+        <div class="stopIconL"><div class="busr" id="busi_9"></div></div>
+        <div class="busro" id="buso_9"></div>
+    </div>
+    <div class="b relative">
+        <div class="stopName"><span class="center">明湖國中</span></div>
+    </div>
+</div>
+<div class="stop right">
+    <div class="t sfont relative">
+        <div class="eta" id="etai_10"></div><div class="etaor" id="etao_10"></div>
+    </div>
+    <div class="m fill relative">
+        <div class="stopIconL"><div class="busr" id="busi_10"></div></div>
+        <div class="busro" id="buso_10"></div>
+    </div>
+    <div class="b relative">
+        <div class="stopName"><span class="center">明湖國小(公共電視台)</span></div>
+    </div>
+</div>
+<div class="stop right">
+    <div class="t sfont relative">
+        <div class="eta" id="etai_11"></div><div class="etaor" id="etao_11"></div>
+    </div>
+    <div class="m fill relative">
+        <div class="stopIconMRT"><div class="busr" id="busi_11"></div></div>
+        <div class="busro" id="buso_11"></div>
+    </div>
+    <div class="b relative">
+        <div class="stopName"><span class="center">捷運葫洲站(康寧專校)</span></div>
+    </div>
+</div>
+<div class="stop right">
+    <div class="t sfont relative">
+        <div class="eta" id="etai_12"></div><div class="etaor" id="etao_12"></div>
+    </div>
+    <div class="m fill relative">
+        <div class="stopIconL"><div class="busr" id="busi_12"></div></div>
+        <div class="busro" id="buso_12"></div>
+    </div>
+    <div class="b relative">
+        <div class="stopName"><span class="center">康寧醫院</span></div>
+    </div>
+</div>
+<div class="stop right">
+    <div class="t sfont relative">
+        <div class="eta" id="etai_13"></div><div class="etaor" id="etao_13"></div>
+    </div>
+    <div class="m fill relative">
+        <div class="stopIconL"><div class="busr" id="busi_13"></div></div>
+        <div class="busro" id="buso_13"></div>
+    </div>
+    <div class="b relative">
+        <div class="stopName"><span class="center">黃石公廟</span></div>
+    </div>
+</div>
+<div class="stop right">
+    <div class="t sfont relative">
+        <div class="eta" id="etai_14"></div><div class="etaor" id="etao_14"></div>
+    </div>
+    <div class="m fill relative">
+        <div class="stopIconL"><div class="busr" id="busi_14"></div></div>
+        <div class="busro" id="buso_14"></div>
+    </div>
+    <div class="b relative">
+        <div class="stopName"><span class="center">大湖公園</span></div>
+    </div>
+</div>
+
+<div class="stope right">
+    <div class="t"></div>
+    <div class="m fill"></div>
+    <div class="b"></div>
+</div>
+<div class="bar right">
+    <div class="t"></div>
+    <div class="m fill"></div>
+    <div class="b fill"></div>
+</div>
+
+<div class="clear"></div>
+<div class="bar left">
+    <div class="t fill"></div>
+    <div class="m fill"></div>
+    <div class="b"></div>
+</div>
+<div class="stope left">
+    <div class="t"></div>
+    <div class="m fill"></div>
+    <div class="b"></div>
+</div>
+<div class="stop left">
+    <div class="t sfont relative">
+        <div class="eta" id="etai_15"></div><div class="etaol" id="etao_15"></div>
+    </div>
+    <div class="m fill relative">
+        <div class="stopIconMRT"><div class="busl" id="busi_15"></div></div>
+        <div class="buslo" id="buso_15"></div>
+    </div>
+    <div class="b relative">
+        <div class="stopName"><span class="center">捷運大湖公園站</span></div>
+    </div>
+</div>
+<div class="stop left">
+    <div class="t sfont relative">
+        <div class="eta" id="etai_16"></div><div class="etaol" id="etao_16"></div>
+    </div>
+    <div class="m fill relative">
+        <div class="stopIconR"><div class="busl" id="busi_16"></div></div>
+        <div class="buslo" id="buso_16"></div>
+    </div>
+    <div class="b relative">
+        <div class="stopName"><span class="center">大湖</span></div>
+    </div>
+</div>
+<div class="stop left">
+    <div class="t sfont relative">
+        <div class="eta" id="etai_17"></div><div class="etaol" id="etao_17"></div>
+    </div>
+    <div class="m fill relative">
+        <div class="stopIconR"><div class="busl" id="busi_17"></div></div>
+        <div class="buslo" id="buso_17"></div>
+    </div>
+    <div class="b relative">
+        <div class="stopName"><span class="center">金龍里</span></div>
+    </div>
+</div>
+<div class="stop left">
+    <div class="t sfont relative">
+        <div class="eta" id="etai_18"></div><div class="etaol" id="etao_18"></div>
+    </div>
+    <div class="m fill relative">
+        <div class="stopIconMRT"><div class="busl" id="busi_18"></div></div>
+        <div class="buslo" id="buso_18"></div>
+    </div>
+    <div class="b relative">
+        <div class="stopName"><span class="center">捷運內湖站</span></div>
+    </div>
+</div>
+<div class="stop left">
+    <div class="t sfont relative">
+        <div class="eta" id="etai_19"></div><div class="etaol" id="etao_19"></div>
+    </div>
+    <div class="m fill relative">
+        <div class="stopIconR"><div class="busl" id="busi_19"></div></div>
+        <div class="buslo" id="buso_19"></div>
+    </div>
+    <div class="b relative">
+        <div class="stopName"><span class="center">湖光市場</span></div>
+    </div>
+</div>
+<div class="stop left">
+    <div class="t sfont relative">
+        <div class="eta" id="etai_20"></div><div class="etaol" id="etao_20"></div>
+    </div>
+    <div class="m fill relative">
+        <div class="stopIconR"><div class="busl" id="busi_20"></div></div>
+        <div class="buslo" id="buso_20"></div>
+    </div>
+    <div class="b relative">
+        <div class="stopName"><span class="center">成功路三段</span></div>
+    </div>
+</div>
+<div class="stop left">
+    <div class="t sfont relative">
+        <div class="eta" id="etai_21"></div><div class="etaol" id="etao_21"></div>
+    </div>
+    <div class="m fill relative">
+        <div class="stopIconR"><div class="busl" id="busi_21"></div></div>
+        <div class="buslo" id="buso_21"></div>
+    </div>
+    <div class="b relative">
+        <div class="stopName"><span class="center">內湖高中</span></div>
+    </div>
+</div>
+
+<div class="bar left">
+    <div class="t"></div>
+    <div class="m fill"></div>
+    <div class="b fill"></div>
+</div>
+
+<div class="clear"></div>
+<div class="bar right">
+    <div class="t fill"></div>
+    <div class="m fill"></div>
+    <div class="b"></div>
+</div>
+<div class="stop right">
+    <div class="t sfont relative">
+        <div class="eta" id="etai_22"></div><div class="etaor" id="etao_22"></div>
+    </div>
+    <div class="m fill relative">
+        <div class="stopIconMRT"><div class="busr" id="busi_22"></div></div>
+        <div class="busro" id="buso_22"></div>
+    </div>
+    <div class="b relative">
+        <div class="stopName"><span class="center">捷運文德站(碧湖公園)</span></div>
+    </div>
+</div>
+<div class="stop right">
+    <div class="t sfont relative">
+        <div class="eta" id="etai_23"></div><div class="etaor" id="etao_23"></div>
+    </div>
+    <div class="m fill relative">
+        <div class="stopIconL"><div class="busr" id="busi_23"></div></div>
+        <div class="busro" id="buso_23"></div>
+    </div>
+    <div class="b relative">
+        <div class="stopName"><span class="center">湖光國宅</span></div>
+    </div>
+</div>
+<div class="stop right">
+    <div class="t sfont relative">
+        <div class="eta" id="etai_24"></div><div class="etaor" id="etao_24"></div>
+    </div>
+    <div class="m fill relative">
+        <div class="stopIconL"><div class="busr" id="busi_24"></div></div>
+        <div class="busro" id="buso_24"></div>
+    </div>
+    <div class="b relative">
+        <div class="stopName"><span class="center">西湖圖書館(湖光教會)</span></div>
+    </div>
+</div>
+<div class="stop right">
+    <div class="t sfont relative">
+        <div class="eta" id="etai_25"></div><div class="etaor" id="etao_25"></div>
+    </div>
+    <div class="m fill relative">
+        <div class="stopIconMRT"><div class="busr" id="busi_25"></div></div>
+        <div class="busro" id="buso_25"></div>
+    </div>
+    <div class="b relative">
+        <div class="stopName"><span class="center">捷運港墘站(內湖高工)</span></div>
+    </div>
+</div>
+<div class="stop right">
+    <div class="t sfont relative">
+        <div class="eta" id="etai_26"></div><div class="etaor" id="etao_26"></div>
+    </div>
+    <div class="m fill relative">
+        <div class="stopIconL"><div class="busr" id="busi_26"></div></div>
+        <div class="busro" id="buso_26"></div>
+    </div>
+    <div class="b relative">
+        <div class="stopName"><span class="center">麗山國中</span></div>
+    </div>
+</div>
+<div class="stop right">
+    <div class="t sfont relative">
+        <div class="eta" id="etai_27"></div><div class="etaor" id="etao_27"></div>
+    </div>
+    <div class="m fill relative">
+        <div class="stopIconL"><div class="busr" id="busi_27"></div></div>
+        <div class="busro" id="buso_27"></div>
+    </div>
+    <div class="b relative">
+        <div class="stopName"><span class="center">麗山街</span></div>
+    </div>
+</div>
+<div class="stop right">
+    <div class="t sfont relative">
+        <div class="eta" id="etai_28"></div><div class="etaor" id="etao_28"></div>
+    </div>
+    <div class="m fill relative">
+        <div class="stopIconL"><div class="busr" id="busi_28"></div></div>
+        <div class="busro" id="buso_28"></div>
+    </div>
+    <div class="b relative">
+        <div class="stopName"><span class="center">恕德家商</span></div>
+    </div>
+</div>
+
+<div class="stope right">
+    <div class="t"></div>
+    <div class="m fill"></div>
+    <div class="b"></div>
+</div>
+<div class="bar right">
+    <div class="t"></div>
+    <div class="m fill"></div>
+    <div class="b fill"></div>
+</div>
+
+<div class="clear"></div>
+<div class="bar left">
+    <div class="t fill"></div>
+    <div class="m fill"></div>
+    <div class="b"></div>
+</div>
+<div class="stope left">
+    <div class="t"></div>
+    <div class="m fill"></div>
+    <div class="b"></div>
+</div>
+<div class="stop left">
+    <div class="t sfont relative">
+        <div class="eta" id="etai_29"></div><div class="etaol" id="etao_29"></div>
+    </div>
+    <div class="m fill relative">
+        <div class="stopIconMRT"><div class="busl" id="busi_29"></div></div>
+        <div class="buslo" id="buso_29"></div>
+    </div>
+    <div class="b relative">
+        <div class="stopName"><span class="center">捷運西湖站</span></div>
+    </div>
+</div>
+<div class="stop left">
+    <div class="t sfont relative">
+        <div class="eta" id="etai_30"></div><div class="etaol" id="etao_30"></div>
+    </div>
+    <div class="m fill relative">
+        <div class="stopIconR"><div class="busl" id="busi_30"></div></div>
+        <div class="buslo" id="buso_30"></div>
+    </div>
+    <div class="b relative">
+        <div class="stopName"><span class="center">治磐新村</span></div>
+    </div>
+</div>
+<div class="stop left">
+    <div class="t sfont relative">
+        <div class="eta" id="etai_31"></div><div class="etaol" id="etao_31"></div>
+    </div>
+    <div class="m fill relative">
+        <div class="stopIconR"><div class="busl" id="busi_31"></div></div>
+        <div class="buslo" id="buso_31"></div>
+    </div>
+    <div class="b relative">
+        <div class="stopName"><span class="center">文湖國小</span></div>
+    </div>
+</div>
+<div class="stop left">
+    <div class="t sfont relative">
+        <div class="eta" id="etai_32"></div><div class="etaol" id="etao_32"></div>
+    </div>
+    <div class="m fill relative">
+        <div class="stopIconR"><div class="busl" id="busi_32"></div></div>
+        <div class="buslo" id="buso_32"></div>
+    </div>
+    <div class="b relative">
+        <div class="stopName"><span class="center">美麗華</span></div>
+    </div>
+</div>
+<div class="stop left">
+    <div class="t sfont relative">
+        <div class="eta" id="etai_33"></div><div class="etaol" id="etao_33"></div>
+    </div>
+    <div class="m fill relative">
+        <div class="stopIconMRT"><div class="busl" id="busi_33"></div></div>
+        <div class="buslo" id="buso_33"></div>
+    </div>
+    <div class="b relative">
+        <div class="stopName"><span class="center">捷運劍南路站</span></div>
+    </div>
+</div>
+<div class="stop left">
+    <div class="t sfont relative">
+        <div class="eta" id="etai_34"></div><div class="etaol" id="etao_34"></div>
+    </div>
+    <div class="m fill relative">
+        <div class="stopIconR"><div class="busl" id="busi_34"></div></div>
+        <div class="buslo" id="buso_34"></div>
+    </div>
+    <div class="b relative">
+        <div class="stopName"><span class="center">自強隧道</span></div>
+    </div>
+</div>
+<div class="stop left">
+    <div class="t sfont relative">
+        <div class="eta" id="etai_35"></div><div class="etaol" id="etao_35"></div>
+    </div>
+    <div class="m fill relative">
+        <div class="stopIconR"><div class="busl" id="busi_35"></div></div>
+        <div class="buslo" id="buso_35"></div>
+    </div>
+    <div class="b relative">
+        <div class="stopName"><span class="center">植福宮</span></div>
+    </div>
+</div>
+
+<div class="bar left">
+    <div class="t"></div>
+    <div class="m fill"></div>
+    <div class="b fill"></div>
+</div>
+
+<div class="clear"></div>
+<div class="bar right">
+    <div class="t fill"></div>
+    <div class="m fill"></div>
+    <div class="b"></div>
+</div>
+<div class="stop right">
+    <div class="t sfont relative">
+        <div class="eta" id="etai_36"></div><div class="etaor" id="etao_36"></div>
+    </div>
+    <div class="m fill relative">
+        <div class="stopIconMRT"><div class="busr" id="busi_36"></div></div>
+        <div class="busro" id="buso_36"></div>
+    </div>
+    <div class="b relative">
+        <div class="stopName"><span class="center">捷運大直站</span></div>
+    </div>
+</div>
+<div class="stop right">
+    <div class="t sfont relative">
+        <div class="eta" id="etai_37"></div><div class="etaor" id="etao_37"></div>
+    </div>
+    <div class="m fill relative">
+        <div class="stopIconL"><div class="busr" id="busi_37"></div></div>
+        <div class="busro" id="buso_37"></div>
+    </div>
+    <div class="b relative">
+        <div class="stopName"><span class="center">大直高中</span></div>
+    </div>
+</div>
+<div class="stop right">
+    <div class="t sfont relative">
+        <div class="eta" id="etai_38"></div><div class="etaor" id="etao_38"></div>
+    </div>
+    <div class="m fill relative">
+        <div class="stopIconL"><div class="busr" id="busi_38"></div></div>
+        <div class="busro" id="buso_38"></div>
+    </div>
+    <div class="b relative">
+        <div class="stopName"><span class="center">空軍司令部</span></div>
+    </div>
+</div>
+<div class="stop right">
+    <div class="t sfont relative">
+        <div class="eta" id="etai_39"></div><div class="etaor" id="etao_39"></div>
+    </div>
+    <div class="m fill relative">
+        <div class="stopIconL"><div class="busr" id="busi_39"></div></div>
+        <div class="busro" id="buso_39"></div>
+    </div>
+    <div class="b relative">
+        <div class="stopName"><span class="center">忠烈祠</span></div>
+    </div>
+</div>
+<div class="stop right">
+    <div class="t sfont relative">
+        <div class="eta" id="etai_40"></div><div class="etaor" id="etao_40"></div>
+    </div>
+    <div class="m fill relative">
+        <div class="stopIconL"><div class="busr" id="busi_40"></div></div>
+        <div class="busro" id="buso_40"></div>
+    </div>
+    <div class="b relative">
+        <div class="stopName"><span class="center">中央電台</span></div>
+    </div>
+</div>
+<div class="stop right">
+    <div class="t sfont relative">
+        <div class="eta" id="etai_41"></div><div class="etaor" id="etao_41"></div>
+    </div>
+    <div class="m fill relative">
+        <div class="stopIconL"><div class="busr" id="busi_41"></div></div>
+        <div class="busro" id="buso_41"></div>
+    </div>
+    <div class="b relative">
+        <div class="stopName"><span class="center">圓山大飯店</span></div>
+    </div>
+</div>
+<div class="stop right">
+    <div class="t sfont relative">
+        <div class="eta" id="etai_42"></div><div class="etaor" id="etao_42"></div>
+    </div>
+    <div class="m fill relative">
+        <div class="stopIconL"><div class="busr" id="busi_42"></div></div>
+        <div class="busro" id="buso_42"></div>
+    </div>
+    <div class="b relative">
+        <div class="stopName"><span class="center">臺北市立美術館</span></div>
+    </div>
+</div>
+
+<div class="stope right">
+    <div class="t"></div>
+    <div class="m fill"></div>
+    <div class="b"></div>
+</div>
+<div class="bar right">
+    <div class="t"></div>
+    <div class="m fill"></div>
+    <div class="b fill"></div>
+</div>
+
+<div class="clear"></div>
+<div class="bar left">
+    <div class="t fill"></div>
+    <div class="m fill"></div>
+    <div class="b"></div>
+</div>
+<div class="stope left">
+    <div class="t"></div>
+    <div class="m fill"></div>
+    <div class="b"></div>
+</div>
+<div class="stop left">
+    <div class="t sfont relative">
+        <div class="eta" id="etai_43"></div><div class="etaol busgone" id="etao_43"></div>
+    </div>
+    <div class="m  relative">
+        <div class="stopIconMRT"><div class="busl" id="busi_43"></div></div>
+        <div class="busgone" id="buso_43"></div>
+    </div>
+    <div class="b relative">
+        <div class="stopName"><span class="center">捷運圓山站</span></div>
+    </div>
+</div>
+
+</div>
+</div>
+
+</div>
+
+</div>
+</body>
+</html>
+<script type="text/javascript">
+    $(document).ready(function () {
+        UpdateRouteInfo('/newmap/Js/RouteInfo', '15312', '0', 'tw');
+
+        setInterval("UpdateRouteInfo('/newmap/Js/RouteInfo', '15312', '0', 'tw')", 15000);
+    });
+</script>

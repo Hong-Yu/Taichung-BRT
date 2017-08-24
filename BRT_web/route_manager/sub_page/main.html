@@ -1,0 +1,42 @@
+<div >
+    <pre class="alert alert-info" ></pre>
+</div>
+
+<div ng-controller="RouteForm">
+    <modal-add></modal-add>
+    <select id="select_route" ng-model="selected_route"
+            ng-change="getScoreData(selected_route)"
+            style="font-size:12pt;font-weight:bold;">
+        <option style="display:none" value="">請選擇路線</option>
+        <option ng-repeat="route in routes" value="{{route.id}}">{{route.name}}</option>
+    </select>
+</div>
+
+
+<div style="clear:both;padding-top:10px;padding-bottom:35px;">
+    <form class="form-inline add_route" style="">
+        <div class="form-group">
+            <label class="sr-only" >Email address</label>
+            <input type="email" class="form-control name"  placeholder="請輸入路線名稱">
+        </div>
+        <div class="form-group" >
+            <label class="sr-only" >Password</label>
+            <input type="color" style="width:50px" class="form-control color"  placeholder="請輸入路線顏色">
+        </div>
+        <div class="form-group">
+            <label class="sr-only" >Password</label>
+            <input type="number" class="form-control section_number"  placeholder="請輸入路口總數">
+        </div>
+
+    </form>
+    <button type="submit" class="btn btn-primary upload_route" style="font-weight:bold;float:right;">更新</button>
+
+</div>
+
+
+
+<div class="route_map">
+
+
+
+

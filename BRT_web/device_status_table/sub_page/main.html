@@ -1,0 +1,27 @@
+<div ng-controller="deviceList">
+    <table class="table table-bordered">
+        <tr>
+            <th>路口編號</th>
+            <th>TC</th>
+            <th>IPC</th>
+            <th>GPS</th>
+            <th>SRC-1</th>
+            <th>SRC-2</th>
+            <th>SRC-3</th>
+            <th>SRC-4</th>
+        </tr>
+        <tr ng-repeat="device in devices">
+            <td class="">{{device.intersection_id}}</td>
+            <td class="{{StringTransfer(device.tc).class}}">{{ StringTransfer(device.tc).text }} <br> {{devices_receive_time[$index].tc | date: 'M/d h:mm a'}}</td>
+            <td class="{{StringTransfer(device.ipc).class}}">{{ StringTransfer(device.ipc).text }} <br> {{devices_receive_time[$index].ipc | date: 'M/d h:mm a'}}</td>
+            <td class="{{StringTransfer(device.gps).class}}">{{ StringTransfer(device.gps).text }} <br> {{devices_receive_time[$index].gps | date: 'M/d h:mm a'}}</td>
+            <td class="{{StringTransfer(device.src[0]).class}}">{{ StringTransfer(device.src[0]).text }} <br> {{devices_receive_time[$index].src[0] | date: 'M/d h:mm a'}}</td>
+            <td class="{{StringTransfer(device.src[1]).class}}">{{ StringTransfer(device.src[1]).text }} <br> {{devices_receive_time[$index].src[1] | date: 'M/d h:mm a'}}</td>
+            <td class="{{StringTransfer(device.src[2]).class}}">{{ StringTransfer(device.src[2]).text }} <br> {{devices_receive_time[$index].src[2] | date: 'M/d h:mm a'}}</td>
+            <td class="{{StringTransfer(device.src[3]).class}}">{{ StringTransfer(device.src[3]).text }} <br> {{devices_receive_time[$index].src[3] | date: 'M/d h:mm a'}}</td>
+            <td></td>
+            <td></td>
+
+        </tr>
+    </table>
+</div>

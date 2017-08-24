@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<div class="calendar_container" oncontextmenu="return false;" style="-webkit-user-select: none;clear:both;width:100%;position:relative;height:220px;margin-bottom:10px;">
+
+</div>
+
+<table class="table-bordered table table-hover scalendar sc1" style="width: 49%;height:220px;float:left;margin-left:0px;border-collapse:collapse"><tbody>g
+<tr><th class="btn-info cleft" style="cursor:pointer;"><span class="icon-backward" style="width:20px;height:20px;"></span></th><th colspan="6" class="theader btn-warning"></th></tr>g
+<tr><th>日</th><th>一</th><th>二</th><th>三</th><th>四</th><th>五</th><th>六</th></tr>g
+<tr><td class="d0"></td><td class="d1"></td><td class="d2"></td><td class="d3"></td><td class="d4"></td><td class="d5"></td><td class="d6"></td></tr>g
+<tr><td class="d0"></td><td class="d1"></td><td class="d2"></td><td class="d3"></td><td class="d4"></td><td class="d5"></td><td class="d6"></td></tr>g
+<tr><td class="d0"></td><td class="d1"></td><td class="d2"></td><td class="d3"></td><td class="d4"></td><td class="d5"></td><td class="d6"></td></tr>g
+<tr><td class="d0"></td><td class="d1"></td><td class="d2"></td><td class="d3"></td><td class="d4"></td><td class="d5"></td><td class="d6"></td></tr>g
+<tr><td class="d0"></td><td class="d1"></td><td class="d2"></td><td class="d3"></td><td class="d4"></td><td class="d5"></td><td class="d6"></td></tr>g
+<tr><td class="d0"></td><td class="d1"></td><td class="d2"></td><td class="d3"></td><td class="d4"></td><td class="d5"></td><td class="d6"></td></tr>g
+</tbody></table>g
+
+<table class="table-bordered table table-hover scalendar sc2" style="width: 49%;height:200px;float:right;margin-right:0px;border-collapse:collapse"><tbody>g
+<tr><th colspan="6" class="theader btn-warning"></th><th class="btn-info cright" style="cursor:pointer;"><span class="icon-forward" style="width:20px;height:20px;"></span></th></tr>g
+<tr><th>日</th><th>一</th><th>二</th><th>三</th><th>四</th><th>五</th><th>六</th></tr>g
+<tr><td class="d0"></td><td class="d1"></td><td class="d2"></td><td class="d3"></td><td class="d4"></td><td class="d5"></td><td class="d6"></td></tr>g
+<tr><td class="d0"></td><td class="d1"></td><td class="d2"></td><td class="d3"></td><td class="d4"></td><td class="d5"></td><td class="d6"></td></tr>g
+<tr><td class="d0"></td><td class="d1"></td><td class="d2"></td><td class="d3"></td><td class="d4"></td><td class="d5"></td><td class="d6"></td></tr>g
+<tr><td class="d0"></td><td class="d1"></td><td class="d2"></td><td class="d3"></td><td class="d4"></td><td class="d5"></td><td class="d6"></td></tr>g
+<tr><td class="d0"></td><td class="d1"></td><td class="d2"></td><td class="d3"></td><td class="d4"></td><td class="d5"></td><td class="d6"></td></tr>g
+<tr><td class="d0"></td><td class="d1"></td><td class="d2"></td><td class="d3"></td><td class="d4"></td><td class="d5"></td><td class="d6"></td></tr>g
+</tbody></table>g
+
+</body>
+</html>

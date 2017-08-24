@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>unbind demo</title>
+    <style>
+        button {
+            margin: 5px;
+        }
+        button#theone {
+            color: red;
+            background: yellow;
+        }
+    </style>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+<div id="div1">
+    <button id="theone">Does nothing...</button>
+</div>
+
+<button id="bind">Bind Click</button>
+<button id="unbind">Unbind Click</button>
+<div class="screen" style="display:none;">Click!</div>
+
+<script>
+    function aClick() {
+        $( "div.screen" ).show().fadeOut( "slow" );
+    }
+    $( "#bind" ).click(function() {
+        $( "#theone" )
+                .bind( "click", aClick );
+                $( "#theone")
+                .text( "Can Click!" );
+    });
+    $( "#unbind" ).click(function() {
+        $( "#theone" ).text( "Does nothing..." );
+        $( "#div1" )
+                .unbind( "click", function(){ console.log("unbind") } );
+
+    });
+</script>
+
+</body>
+</html>

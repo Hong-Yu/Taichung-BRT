@@ -1,0 +1,215 @@
+
+
+<th style="width:20px;text-align:center;padding-top:24px;">
+    <input type="checkbox" style="margin:2px;" /></th>
+<th style="width:20px;text-align:center;padding-top:20px;">
+    <span class="btn btn-warning btn-operation priority_switch" value="0">定</span>
+</th>
+<th style="color:#505050;font-size:18pt;font-weight:bold;vertical-align:top;padding-top:20px;width:40px;">
+    <div class="input-append bootstrap-timepicker">
+        <input type="text" class="input-small" style="width:50px;">
+        <span class="add-on"><i class="icon-time"></i></span>
+    </div>
+</th>
+<th class="plan_id" style="width:20px;text-align:center;padding-top:22px;">
+    <input type="number" style="width:15px;height:18px;" value="n/a" />
+</th>
+<td class="plan_content" style="color:#505050;vertical-align:top;width:150px;padding-top:20px;text-align:center;">
+
+        <select class="phase_list" style="width:130px;font-size:12pt;font-weight:bold;">
+            <!--<option selected="selected">普通二時相</option>-->
+            <!--<option>閃黃燈</option>-->
+        </select>
+    <div class="countdown ped_countdown" style="display:none;">
+        <span style="font-size:12pt;font-weight:bold;color:#669900;">行人倒數</span>
+        <select style="width:65px;font-size:12pt;font-weight:bold;">
+            <option value="0" selected="selected">on</option>
+            <option value="1">off</option>
+        </select>
+    </div>
+    <div class="countdown car_countdown" style="display:none;">
+        <span style="font-size:12pt;font-weight:bold;color:#FF3300;">行車倒數</span>
+        <select style="width:65px;font-size:12pt;font-weight:bold;">
+            <option value="0" selected="selected">on</option>
+            <option value="1">off</option>
+        </select>
+    </div>
+
+</td>
+<td class="plan_content" style="padding:0px;">
+    <table style="width:100%;margin:0px;height:100%;">
+        <thead>
+        <tr>
+            <th class="display-btn" style="cursor:pointer;width:10px;text-align:center"><span class="btn-icon icon-plus"></span></th>
+            <th style="text-align:center;color:red !important;width:30px !important;">分相</th>
+            <th style="text-align:center;color:red !important;">1</th>
+            <th style="text-align:center;color:red !important;">2</th>
+            <th style="text-align:center;color:red !important;">3</th>
+            <th style="text-align:center;color:red !important;">4</th>
+            <th style="text-align:center;color:red !important;">5</th>
+            <th style="text-align:center;color:red !important;">6</th>
+            <!--
+            <th style="text-align:center;color:red !important;">7</th>
+            <th style="text-align:center;color:red !important;">8</th>
+            -->
+            <th style="text-align:center;color:red !important;">週期</th>
+            <th style="text-align:center;color:red !important;">時差</th>
+        </tr>
+        <!--總攬-->
+        <tr class="phase_overview">
+            <td colspan=2 style="color:#0080FF;font-weight:bold;font-size:8pt;padding-left:0px;padding-right:0px;text-align:center;">秒數</td>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;"" /></td>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;"" /></td>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;"" /></td>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;"" /></td>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;"" /></td>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;"" /></td>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;"" /></td>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;"" /></td>
+            <!--
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;"" /></td>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;"" /></td>
+            -->
+        </tr>
+        </thead>
+        <tbody>
+        <!--細項-->
+        <tr class="phase_details">
+            <th colspan=2 style="font-weight:bold;font-size:8pt;padding-left:0px;padding-right:0px;text-align:center;">紅</th>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;" /></td>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;" /></td>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;" /></td>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;" /></td>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;" /></td>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;" /></td>
+            <!--
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;" /></td>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;" /></td>
+            -->
+        </tr>
+        <!--細項-->
+        <tr class="phase_details">
+            <th colspan=2 style="font-weight:bold;font-size:8pt;padding-left:0px;padding-right:0px;text-align:center;">綠</th>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;" /></td>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;" /></td>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;" /></td>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;" /></td>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;" /></td>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;" /></td>
+
+        </tr>
+        <tr class="phase_details">
+            <th colspan=2 style="font-weight:bold;font-size:8pt;padding-left:0px;padding-right:0px;text-align:center;">黃</th>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;" /></td>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;" /></td>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;" /></td>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;" /></td>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;" /></td>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;" /></td>
+
+        </tr>
+        <tr class="phase_details">
+            <th colspan=2 style="font-weight:bold;font-size:8pt;padding-left:0px;padding-right:0px;text-align:center;">行人紅</th>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;" /></td>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;" /></td>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;" /></td>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;" /></td>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;" /></td>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;" /></td>
+
+        </tr>
+        <tr class="phase_details">
+            <th colspan=2 style="font-weight:bold;font-size:8pt;padding-left:0px;padding-right:0px;text-align:center;">行綠閃</th>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;" /></td>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;" /></td>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;" /></td>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;" /></td>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;" /></td>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;" /></td>
+
+        </tr>
+        <tr class="phase_details phase_details-showMaxGandMinG">
+            <th colspan=2 style="font-weight:bold;font-size:8pt;padding-left:0px;padding-right:0px;text-align:center;">最小綠</th>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;" /></td>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;" /></td>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;" /></td>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;" /></td>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;" /></td>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;" /></td>
+
+        </tr>
+        <tr class="phase_details phase_details-showMaxGandMinG">
+            <th colspan=2 style="font-weight:bold;font-size:8pt;padding-left:0px;padding-right:0px;text-align:center;">最大綠</th>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;" /></td>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;" /></td>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;" /></td>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;" /></td>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;" /></td>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;" /></td>
+        </tr>
+        <tr class="phase_details pass_east">
+            <th colspan=2 >通行 東向</th>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr class="phase_details pass_west">
+            <th colspan=2 >通行 西向</th>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr class="phase_details phase_details-showMaxGandMinG">
+            <th colspan=2 >折減比例 東向</th>
+            <td><input type="number"></td>
+            <td><input type="number"></td>
+            <td><input type="number"></td>
+            <td><input type="number"></td>
+            <td><input type="number"></td>
+            <td><input type="number"></td>
+        </tr>
+        <tr class="phase_details phase_details-showMaxGandMinG">
+            <th colspan=2 >折減比例 西向</th>
+            <td><input type="number"></td>
+            <td><input type="number"></td>
+            <td><input type="number"></td>
+            <td><input type="number"></td>
+            <td><input type="number"></td>
+            <td><input type="number"></td>
+        </tr>
+        <tr class="phase_details phase_details-showMaxGandMinG">
+            <th colspan=3 style="font-weight:bold;font-size:8pt;padding-left:0px;padding-right:0px;text-align:center;">車門觸動時間 上行</th>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;" /></td>
+            <th colspan=2 style="font-weight:bold;font-size:8pt;padding-left:0px;padding-right:0px;text-align:center;">車門觸動時間 下行</th>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;" /></td>
+        </tr>
+        <tr class="phase_details phase_details-showMaxGandMinG">
+            <th colspan=3 style="font-weight:bold;font-size:8pt;padding-left:0px;padding-right:0px;text-align:center;">落後班距 上行</th>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;" /></td>
+            <th colspan=2 style="font-weight:bold;font-size:8pt;padding-left:0px;padding-right:0px;text-align:center;">落後班距 下行</th>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;" /></td>
+        </tr>
+        <tr class="phase_details phase_details-showMaxGandMinG">
+            <th colspan=2 style="font-weight:bold;font-size:8pt;padding-left:0px;padding-right:0px;text-align:center;">低速門檻值</th>
+            <td style="padding:0px;"><input type="number" style="padding:0px;margin:0px;width:100%;border-width:0px;height:100%;font-size:14pt;font-weight:bold;" /></td>
+        </tr>
+        <tr class="phase_details phase_details-showMaxGandMinG">
+
+        </tr>
+        <tr class="phase_details phase_details-showMaxGandMinG">
+
+        </tr>
+        </tbody>
+    </table>
+
+</td>
+
+
+</tr>
+

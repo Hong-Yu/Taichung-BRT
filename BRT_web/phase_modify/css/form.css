@@ -1,0 +1,32 @@
+
+span.btn, button.btn{
+    font-weight: bold;
+}
+
+body {
+    padding-top:80px;
+}
+
+button.upload {
+    float: right;
+}
+
+p.upload_message {
+    text-align:center;
+    font-size:25px;
+    font-weight:bold;
+    display:none;
+}
+
+p.success {
+    color:green;
+}
+
+p.fail {
+    color:red;
+}
+
+span.phase_add, span.phase_minus{
+    cursor: pointer;
+    font-size: large;
+}

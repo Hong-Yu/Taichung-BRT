@@ -1,0 +1,227 @@
+<!--<!doctype html>-->
+<!--<html lang="zh-TW" style="height:100%;">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--&lt;!&ndash; Safari &ndash;&gt;-->
+    <!--<meta name="viewport" content="width=device-width, user-scalable=no" />-->
+    <!--<title>BRT快捷公車資訊系統</title>-->
+    <!--&lt;!&ndash; JQuery &ndash;&gt;-->
+    <!--<script src="lib/jquery-1.10.2.min.js"></script>-->
+    <!--&lt;!&ndash;<script src="lib/google_map_jquery_builder.js"></script>&ndash;&gt;-->
+    <!--&lt;!&ndash; Boostrap  &ndash;&gt;-->
+    <!--&lt;!&ndash;<link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">&ndash;&gt;-->
+    <!--&lt;!&ndash;<script src="lib/bootstrap/js/bootstrap.min.js"></script>&ndash;&gt;-->
+    <!--&lt;!&ndash; Boostrap Plugin &ndash;&gt;-->
+    <!--&lt;!&ndash;<script src="../../lib/bootstrap/timepicker_plugin/js/bootstrap-timepicker.min.js"></script>&ndash;&gt;-->
+    <!--&lt;!&ndash;<link href="../../lib/bootstrap/timepicker_plugin/css/bootstrap-timepicker.min.css" rel="stylesheet" media="screen">&ndash;&gt;-->
+    <!--&lt;!&ndash;<script src="../../lib/bootstrap/bootstrap-switch-master/dist/js/bootstrap-switch.min.js"></script>&ndash;&gt;-->
+    <!--&lt;!&ndash;<link href="../../lib/bootstrap/bootstrap-switch-master/dist/css/bootstrap3/bootstrap-switch.min.css" rel="stylesheet" media="screen">&ndash;&gt;-->
+    <!--&lt;!&ndash;<script src="../../lib/calculate.js"></script>&ndash;&gt;-->
+    <!--&lt;!&ndash; Mobile Checker &ndash;&gt;-->
+    <!--&lt;!&ndash;<script src="library/mobile.js"></script>&ndash;&gt;-->
+    <!--&lt;!&ndash; Includer &ndash;&gt;-->
+    <!--<script src="lib/includer_header.js"></script>-->
+<!--</head>-->
+<body style="height:100%;padding:0px;margin:0px;overflow-y:scroll;min-width:1024px;width:1024px;margin:auto;">
+<!-- <body style="height:100%;padding:0px;margin:0px;overflow-y:scroll;min-width:1024px;width:100%;margin:auto;"> -->
+<!-- 上方的 modal 物件 -->
+<div class="top_stretch" style="position:fixed;width:100%;background-color:silver;opacity:0.5;z-index:100;"></div>
+<table style="width:100%;height:100%;" border="0">
+    <tbody>
+    <tr>
+        <th style="height:100px;vertical-align:middle;text-align:center;background-image:url(lib/Logo.png);" >
+            <!-- Banner Logo -->
+        </th>
+    </tr>
+    <tr>
+        <td style="height:42px;vertical-align:middle;padding:0px;" colspan="2">
+            <div class="navbar" style="margin:0px;">
+                <div class="navbar-inner">
+                    <a class="brand" href="#"><span style="text-shadow:-2px 1px 1px black;color:lightgreen;">導覽列<span></a>
+                    <div class="user_name" style="float:right;position:relative;top:9px">
+                        <span></span>
+                        <button class="sign_out btn btn-danger" style="display:none">登出</button>
+                    </div>
+
+                    <ul class="nav">
+                        <li class="active"><a href="#">首頁</a></li>
+                        <li><a href="#">Link</a></li>
+                        <!-- <li><a href="#">Link</a></li> -->
+                    </ul>
+                </div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td style="width:180px;vertical-align:top;">
+
+
+
+
+            <!-- 選單UI -->
+            <div class="accordion" id="accordion2">
+
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <div class="accordion-toggle btn btn-primary btn-inverse text-center" data-toggle="collapse" data-parent="#accordion2" href="#collapse1">
+                            BRT即時狀態
+                        </div>
+                    </div>
+                    <div id="collapse1" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                            <div class="btn btn-info btn-block text-center" onclick="sub_page_live_status();">即時狀態</div>
+                            <div class="btn btn-info btn-block text-center" onclick="sub_page_live_status_sketch();">即時狀態(簡)</div>
+                            <!-- <div class="btn btn-info btn-block text-center" onclick="sub_page_live_steps();">即時步階</div> -->
+                            <div class="btn btn-info btn-block text-center" onclick="sub_page_time_space_diagram();">時空圖</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <div class="accordion-toggle btn btn-primary btn-inverse text-center" data-toggle="collapse" data-parent="#accordion2" href="#collapse2">
+                            設備連線狀態
+                        </div>
+                    </div>
+                    <div id="collapse2" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                            <div class="btn btn-info btn-block text-center" onclick="sub_page_device_status_map();">連線狀態-地圖</div>
+                            <div class="btn btn-info btn-block text-center" onclick="sub_page_device_status_table();">連線狀態-列表</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <div class="accordion-toggle btn btn-primary btn-inverse text-center" data-toggle="collapse" data-parent="#accordion2" href="#collapse3">
+                            號誌時制規劃
+                        </div>
+                    </div>
+                    <div id="collapse3" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                            <div class="btn btn-info btn-block text-center" onclick="sub_page_time_plan_query();">查詢路口時制計畫</div>
+                            <div class="btn btn-info btn-block text-center" onclick="sub_page_time_plan_special();">時制計畫設定</div>
+                            <!--<div class="btn btn-info btn-block text-center" onclick="bt5();">路口排程</div>-->
+                            <div class="btn btn-info btn-block text-center" onclick="sub_page_device_control();">控制器參數設定</div>
+                            <div class="btn btn-info btn-block text-center" onclick="sub_page_phase_modify();">時相內容修改</div>
+                            <div class="btn btn-info btn-block text-center" onclick="sub_page_phase_lighting();">時相步階設定</div>
+                            <!--sub_page_phase_modify-->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <div class="accordion-toggle btn btn-primary btn-inverse text-center" data-toggle="collapse" data-parent="#accordion2" href="#collapse4" onclick="sub_page_brt_performance();">
+                            BRT績效
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <div class="accordion-toggle btn btn-primary btn-inverse text-center" data-toggle="collapse" data-parent="#accordion2" href="#collapse5" onclick="sub_page_accident();">
+                            事故顯示與建立
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 後台插入點 -->
+                <div class="dashboard"></div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <div style="color:gold;" class="accordion-toggle btn btn-primary text-center" data-toggle="collapse" data-parent="#accordion2" href="#collapse5" onclick="sub_page_device_manager();">
+                            路口設備管理
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="accordion-group">-->
+                    <!--<div class="accordion-heading">-->
+                        <!--<div style="color:gold;" class="accordion-toggle btn btn-primary text-center" data-toggle="collapse" data-parent="#accordion2" href="#collapse5" onclick="sub_page_route_manager();">-->
+                            <!--路線管理-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <div style="color:gold;" class="accordion-toggle btn btn-primary text-center" data-toggle="collapse" data-parent="#accordion2" href="#collapse5" onclick="sub_page_scheduling();">
+                            排程管理
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <div style="color:gold;" class="accordion-toggle btn btn-primary text-center" data-toggle="collapse" data-parent="#accordion2" href="#collapse5" onclick="sub_page_history();">
+                            歷史紀錄
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <div style="color:gold;" class="accordion-toggle btn btn-primary text-center" data-toggle="collapse" data-parent="#accordion2" href="#collapse5" onclick="sub_page_info();">
+                            路口資訊
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="accordion-group account_manager" style="">-->
+                    <!--<div class="accordion-heading">-->
+                        <!--<div style="color:gold;" class="accordion-toggle btn btn-primary text-center" data-toggle="collapse" data-parent="#accordion2" href="#collapse5" onclick="sub_page_account_manager();">-->
+                            <!--系統帳號管理-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            </div>
+
+        </td>
+        <td id="centerview" style="vertical-align:top;">
+            <span>111 test</span>
+            <!-- 內頁 -->
+        </td>
+    </tr>
+    <tr>
+        <td class="bottomInfo" style="height:200px;vertical-align:middle;text-align:center;" colspan="2">
+            <!-- 下方資訊頁 -->
+            資訊專欄(需要美化邊框)
+        </td>
+    </tr>
+    </tbody>
+</table>
+<hr class="bottom_stretch" style="border-width:0px;" />
+<a class="bottom_modal_point" style="display:none;"></a>
+
+
+<!--<script src="http://192.168.1.205:8081/socket.io/socket.io.js"></script>-->
+<!-- 載入模組 -->
+<!--<script src="../../modules/time_plan_special.js"></script>-->
+<!--// time_plan_special-->
+<!--Hong yu design-->
+<!--<script src="hong_js/web_socket.js"></script>-->
+<link rel="stylesheet" type="text/css" href="modules/init.css">
+<!-- Includer -->
+<!--<script src="../../lib/includer.js"></script>-->
+<!--Include live status-->
+<!--<script src="../../live_status/trash/pseudo_data.js"></script>-->
+<!--<script src="../../live_status/java_script/web_socket.js"></script>-->
+<!--<script src="../../live_status/java_script/main.js"></script>-->
+
+
+<!--Include device control-->
+<script src="../../device_control/java_script/main.js"></script>
+
+<!--Include phase manager-->
+<script src="../../phase_lighting/java_script/main.js"></script>
+<!--user system-->
+<script src="../java_script/login_system.js"></script>
+<script src="../java_script/cookie.js"></script>
+<script src="../java_script/main.js"></script>
+<script>
+//        UserSystemMain();
+//    sub_page_live_status_sketch();
+    sub_page_live_status();
+</script>
+
+
+
+</body>
+</html>

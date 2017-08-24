@@ -1,0 +1,78 @@
+<div>
+    <h3>查詢時制計畫<small> -請先選擇查詢來源 <span class="glyphicon glyphicon-question-sign" title="查詢控制器會花費較多時間；查詢資料庫為上一次查詢控制器的舊紀錄。"></span></small></h3>
+    <form id="data_from_form">
+        <input type="radio" name="data_from" value="TC" checked> 控制器內容
+        <input type="radio" name="data_from" value="DB"> 資料庫內容
+    </form>
+</div>
+<div class="intersection" style="margin-bottom: 5px;">
+    <select class="intersection">
+    </select>
+</div>
+<div  class="progress progress-striped active">
+      <div class="progress-bar progress-bar-info" id="progress_seg" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+    <!-- <span class="sr-only"> -->
+        ::::: 查詢型態中請稍候 :::::
+    <!-- </span> -->
+  </div>
+</div>
+<div id="connect_fail" style="text-align: center"><p class="bg-warning"><strong>查詢失敗!</strong>連線逾時，請檢查連線。</p></div>
+<div id="table_calendar" class="calendar">
+    <table class="table-bordered table table-hover scalendar sc1" style="width: 49%;height:220px;float:left;margin-left:0px;border-collapse:collapse;background-color:#FBFBFB;text-align: center;">
+        <tbody>
+        <tr >
+            <th class="btn-info cleft" style="cursor:pointer;"><span class="icon-backward" style="width:20px;height:20px;"></span></th>
+            <th colspan="6"  class="theader btn-warning"></th>
+        </tr>
+        <tr style="background-color:#FFCC66 !important;"><th>日</th><th>一</th><th>二</th><th>三</th><th>四</th><th>五</th><th>六</th></tr>
+        <tr><td class="d0 0"></td><td class="d1 1"></td><td class="d2 2"></td><td class="d3 3"></td><td class="d4 4"></td><td class="d5 5"></td><td class="d6 6"></td></tr>
+        <tr><td class="d7 7"></td><td class="d8 8"></td><td class="d9 9"></td><td class="d10 10"></td><td class="d11 11"></td><td class="d12 12"></td><td class="d13 13"></td></tr>
+        <tr><td class="d0 0"></td><td class="d1 1"></td><td class="d2 2"></td><td class="d3 3"></td><td class="d4 4"></td><td class="d5 5"></td><td class="d6 6"></td></tr>
+        <tr><td class="d7 7"></td><td class="d8 8"></td><td class="d9 9"></td><td class="d10 10"></td><td class="d11 11"></td><td class="d12 12"></td><td class="d13 13"></td></tr>
+        <tr><td class="d0 0"></td><td class="d1 1"></td><td class="d2 2"></td><td class="d3 3"></td><td class="d4 4"></td><td class="d5 5"></td><td class="d6 6"></td></tr>
+        <tr><td class="d7 7"></td><td class="d8 8"></td><td class="d9 9"></td><td class="d10 10"></td><td class="d11 11"></td><td class="d12 12"></td><td class="d13 13"></td></tr>
+        </tbody>
+    </table>
+    <table class="table-bordered table table-hover scalendar sc2" style="width: 49%;height:200px;float:right;margin-right:0px;border-collapse:collapse;background-color:#FBFBFB;text-align: center;">
+        <tbody>
+        <tr><th colspan="6" class="theader btn-warning"></th><th class="btn-info cright" style="cursor:pointer;"><span class="icon-forward" style="width:20px;height:20px;"></span></th></tr>
+        <tr><th>日</th><th>一</th><th>二</th><th>三</th><th>四</th><th>五</th><th>六</th></tr>
+        <tr><td class="d0 0"></td><td class="d1 1"></td><td class="d2 2"></td><td class="d3 3"></td><td class="d4 4"></td><td class="d5 5"></td><td class="d6 6"></td></tr>
+        <tr><td class="d7 7"></td><td class="d8 8"></td><td class="d9 9"></td><td class="d10 10"></td><td class="d11 11"></td><td class="d12 12"></td><td class="d13 13"></td></tr>
+        <tr><td class="d0 0"></td><td class="d1 1"></td><td class="d2 2"></td><td class="d3 3"></td><td class="d4 4"></td><td class="d5 5"></td><td class="d6 6"></td></tr>
+        <tr><td class="d7 7"></td><td class="d8 8"></td><td class="d9 9"></td><td class="d10 10"></td><td class="d11 11"></td><td class="d12 12"></td><td class="d13 13"></td></tr>
+        <tr><td class="d0 0"></td><td class="d1 1"></td><td class="d2 2"></td><td class="d3 3"></td><td class="d4 4"></td><td class="d5 5"></td><td class="d6 6"></td></tr>
+        <tr><td class="d7 7"></td><td class="d8 8"></td><td class="d9 9"></td><td class="d10 10"></td><td class="d11 11"></td><td class="d12 12"></td><td class="d13 13"></td></tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="segment_type">
+    <ul class="nav nav-tabs segtype_tab" style="font-weight:bold;font-size:15px">
+    </ul>
+</div>
+
+<div class="alert alert-danger" role="alert" id="status_for_db"></div>
+
+<div  class="progress progress-striped active">
+      <div class="progress-bar progress-bar-warning" id="progress_plan" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+    <span class="sr-only">::::: 查詢計畫內容中請稍候 :::::</span>
+  </div>
+</div>
+
+<table class="table table-bordered mainbody" id="timer_plan"style="text-align:center;">
+    <thead>
+    <tr class="header">
+        <th style="text-align:center;font-size:12pt;font-weight:bold;width:100px;" colspan="3">起始時間與計畫編號</th>
+        <th style="text-align:center;font-size:12pt;font-weight:bold;width:630px;" colspan="2">時制計畫內容</th>
+    </tr>
+    </thead>
+    <tbody id="plan_table" style="text-align: center">
+
+    </tbody>
+</table>
+
+<div style="height:100%;padding:10px;padding-top:10px;">
+    <a class="calender_insert_pointer" style="display:none;"></a>
+    <a class="data_header_insert_point" style="display:none;"></a>
+</div>

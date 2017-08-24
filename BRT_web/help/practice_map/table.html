@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!--jQuery lib from google sever-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <title></title>
+</head>
+<script>
+    function Response (responseTxt, statusTxt, xhr) {
+        if (statusTxt == "success")
+            alert("External content loaded successfully!");
+        if (statusTxt == "error")
+            alert("Error: "+xhr.status+": "+xhr.statusText)
+    }
+    function GetAlert (data,status) {
+         alert("Data: " + data +"\nStatus:" + status);
+        //var data2 = data;
+        //console.log(data2);
+    }
+    $(document).ready(function() {
+//      $("#div1").load("some_content.html", Response);
+        //$.get("demo_test.txt", GetAlert);
+        $.post("demo_test.asp", {
+            name:"Donald Duck",
+            city:"Duckburg"
+        },
+        GetAlert
+        );
+
+    });
+</script>
+<body>
+
+<div id="div1">
+    <p>This is a paragraph.</p>
+    <button>Send an HTTP GET request to a page and get the result back</button>
+</div>
+
+
+</body>
+</html>

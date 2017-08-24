@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-TW" style="height:100%;">
+<head>
+    <meta charset="UTF-8">
+    <!-- Safari -->
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <title>BRT快捷公車資訊系統</title>
+    <!-- JQuery -->
+    <script src="lib/jquery-1.10.2.min.js"></script>
+    <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>-->
+    <!-- Google Map -->
+    <!--<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>-->
+    <!--<script src="library/google_map_jquery_builder.js"></script>-->
+    <!-- Boostrap  -->
+    <link rel="stylesheet" href="lib/bootstrap-3.1.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/bootstrap-3.1.1-dist/css/bootstrap-theme.min.css">
+    <!--<link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">-->
+    <!--<script src="lib/bootstrap/js/bootstrap.min.js"></script>-->
+    <!-- Boostrap Plugin -->
+    <script src="lib/bootstrap/timepicker_plugin/js/bootstrap-timepicker.min.js"></script>
+    <link href="lib/bootstrap/timepicker_plugin/css/bootstrap-timepicker.min.css" rel="stylesheet" media="screen">
+    <script src="lib/bootstrap/bootstrap-switch-master/dist/js/bootstrap-switch.min.js"></script>
+    <link href="lib/bootstrap/bootstrap-switch-master/dist/css/bootstrap3/bootstrap-switch.min.css" rel="stylesheet" media="screen">
+    <!--Boostrap Datepicker-->
+    <script type="text/javascript" src="lib/bootstrap-datepicker/js/bootstrap-datepicker.js" charset="UTF-8"></script>
+    <link href="lib/bootstrap-datepicker/css/datepicker.css" rel="stylesheet" media="screen">
+    <!--Calculate-->
+    <script src="lib/calculate.js"></script>
+    <link href="device_control/css/form.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="scheduling/css/main.css">
+
+
+</head>
+<body style="height:100%;padding:0px;margin:0px;overflow-y:scroll;min-width:1024px;width:1024px;margin:auto;">
+<!-- <body style="height:100%;padding:0px;margin:0px;overflow-y:scroll;min-width:1024px;width:100%;margin:auto;"> -->
+<!-- 上方的 modal 物件 -->
+<div class="top_stretch" style="position:fixed;width:100%;background-color:silver;opacity:0.5;z-index:100;">
+
+</div>
+<table>
+    <td id="centerview" style="vertical-align:top;width:750px">
+        <!-- 內頁 -->
+    </td>
+</table>
+<script src="scheduling/javascript/main.js"></script>
+<script src="scheduling/javascript/websocket.js"></script>
+<script src="scheduling/javascript/intersection.js"></script>
+<script src="scheduling/javascript/setting_event.js"></script>
+<script src="scheduling/javascript/page_control.js"></script>
+<script src="scheduling/javascript/current_sched.js"></script>
+
+<script>
+    SchedulingMain();
+</script>
+</body>
+</html>

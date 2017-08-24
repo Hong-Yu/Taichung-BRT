@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-TW" style="height:100%;">
+<head>
+    <meta charset="UTF-8">
+    <!-- Safari -->
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <title>查詢路口時制計畫</title>
+    <!-- JQuery -->
+    <script src="lib/jquery-1.10.2.min.js"></script>
+    <script src="lib/jquery-ui-1.10.4.js"></script>
+
+    <!-- Boostrap  -->
+    <link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="lib/bootstrap-3.1.1-dist/css/bootstrap.min.css">
+    <script src="lib/bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+    <!-- Boostrap Plugin -->
+    <script src="lib/bootstrap/timepicker_plugin/js/bootstrap-timepicker.min.js"></script>
+    <link href="lib/bootstrap/timepicker_plugin/css/bootstrap-timepicker.min.css" rel="stylesheet" media="screen">
+
+    <!--Boostrap Datepicker-->
+    <script type="text/javascript" src="lib/bootstrap-datepicker/js/bootstrap-datepicker.js" charset="UTF-8"></script>
+    <link href="lib/bootstrap-datepicker/css/datepicker.css" rel="stylesheet" media="screen">
+    <!--Calculate-->
+    <script src="lib/calculate.js"></script>
+    <!-- Mobile Checker -->
+    <link href="timing_plan_query/css/form.css" rel="stylesheet">
+
+
+
+</head>
+<!--<body style="height:100%;padding:0px;margin:0px;overflow-y:scroll;min-width:1024px;width:1024px;margin:auto;">-->
+ <!--<body style="height:100%;padding:0px;overflow-y:scroll;width:1024px;margin:auto;">-->
+<body>
+<!-- 上方的 modal 物件 -->
+<div class="top_stretch" style="position:fixed;width:100%;background-color:silver;opacity:0.5;z-index:100;">
+
+</div>
+<table>
+    <td id="centerview" style="vertical-align:top;">
+        <!-- 內頁 -->
+    </td>
+</table>
+
+<!--<script src="http://192.168.1.199:7000/socket.io/socket.io.js"></script>-->
+<!-- 載入模組 -->
+<script src="timing_plan_query/java_script/calendar.js">//new</script>
+<script src="timing_plan_query/java_script/animate_progress.js">//new</script>
+ <script src="timing_plan_query/java_script/intersection.js">//new</script>
+ <script src="timing_plan_query/java_script/date_manager.js"></script>
+<script src="timing_plan_query/java_script/segment_type_event.js"></script>
+<script src="timing_plan_query/java_script/segment_type_paint.js"></script>
+<!--<script src="timing_plan_query/java_script/segment_type_modify.js"></script>-->
+<script src="timing_plan_query/java_script/segment_type_conjunct.js">// new</script>
+<script src="timing_plan_query/java_script/plan_collector.js"></script>
+<script src="timing_plan_query/java_script/upload_transfer.js"> //new </script>
+<script src="timing_plan_query/java_script/upload_action.js"></script>
+<script src="timing_plan_query/java_script/insert_transfer.js"></script>
+<script src="timing_plan_query/java_script/insert_action.js"></script>
+<script src="timing_plan_query/java_script/plan_synchronize.js"> //new </script>
+<script src="timing_plan_query/java_script/time_section_edit.js"> //new </script>
+<script src="timing_plan_query/java_script/websocket_connect.js"></script>
+<script src="timing_plan_query/java_script/timing_plan_table.js"></script>
+<script src="timing_plan_query/java_script/date_time.js"></script>
+<script src="timing_plan_query/java_script/main.js"></script>
+
+<link rel="stylesheet" type="text/css" href="timing_plan/css/init.css">
+
+<!-- Includer -->
+<!--<script src="library/includer.js"></script>-->
+
+<script>
+    TimingPlanMain();
+</script>
+</body>
+</html>

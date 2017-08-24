@@ -1,0 +1,37 @@
+{
+    "FunctionNo":1,
+    "MsgTypeNo":1,
+    "MsgTime":"2014-02-27 18:52:15",
+    "std_plan":{"result":[
+        {"equip_id":20019,"plan_id":1,"phase_no":"0 ","phase_name":"普通二時相","phase_total":2,"allred1":2,"allred2":2,"allred3":0,"allred4":0,"allred5":0,"allred6":0,"allred7":0,"allred8":0,"yellow1":3,"yellow2":3,"yellow3":0,"yellow4":0,"yellow5":0,"yellow6":0,"yellow7":0,"yellow8":0,"g1":75,"g2":35,"g3":0,"g4":0,"g5":0,"g6":0,"g7":0,"g8":0,"pgreen1":75,"pgreen2":35,"pgreen3":0,"pgreen4":0,"pgreen5":0,"pgreen6":0,"pgreen7":0,"pgreen8":0,"pgflash1":3,"pgflash2":3,"pgflash3":0,"pgflash4":0,"pgflash5":0,"pgflash6":0,"pgflash7":0,"pgflash8":0,"pred1":2,"pred2":2,"pred3":0,"pred4":0,"pred5":0,"pred6":0,"pred7":0,"pred8":0,"ming1":25,"ming2":25,"ming3":0,"ming4":0,"ming5":0,"ming6":0,"ming7":0,"ming8":0,"maxg1":75,"maxg2":35,"maxg3":0,"maxg4":0,"maxg5":0,"maxg6":0,"maxg7":0,"maxg8":0,"cycletime":120,"time_offset":10},
+        {"equip_id":20019,"plan_id":2,"phase_no":"1 ","phase_name":"早開二時相","phase_total":3,"allred1":2,"allred2":2,"allred3":2,"allred4":0,"allred5":0,"allred6":0,"allred7":0,"allred8":0,"yellow1":3,"yellow2":3,"yellow3":3,"yellow4":0,"yellow5":0,"yellow6":0,"yellow7":0,"yellow8":0,"g1":10,"g2":60,"g3":35,"g4":0,"g5":0,"g6":0,"g7":0,"g8":0,"pgreen1":10,"pgreen2":60,"pgreen3":35,"pgreen4":0,"pgreen5":0,"pgreen6":0,"pgreen7":0,"pgreen8":0,"pgflash1":3,"pgflash2":3,"pgflash3":3,"pgflash4":0,"pgflash5":0,"pgflash6":0,"pgflash7":0,"pgflash8":0,"pred1":2,"pred2":2,"pred3":2,"pred4":0,"pred5":0,"pred6":0,"pred7":0,"pred8":0,"ming1":10,"ming2":25,"ming3":25,"ming4":0,"ming5":0,"ming6":0,"ming7":0,"ming8":0,"maxg1":10,"maxg2":60,"maxg3":35,"maxg4":0,"maxg5":0,"maxg6":0,"maxg7":0,"maxg8":0,"cycletime":120,"time_offset":10}
+    ],"rowcount":2,"tablename":"std_plan"},
+    "day_segtype":{"result":[
+        {"equip_id":20019,"mon":1,"tue":1,"wed":1,"thu":1,"fri":1,"sat":2,"sun":2,"even_mon":1,"even_tue":1,"even_wed":1,"even_thu":1,"even_fri":1,"even_sat":2,"even_sun":2,"spc1_startdate":"2014-02-28","spc1_enddate":"2014-03-02","spc1":8,"spc2_startdate":"2014-04-04","spc2_enddate":"2014-04-06","spc2":9,"spc3_startdate":"2001-01-01","spc3_enddate":"2001-01-01","spc3":10,"spc4_startdate":"2001-01-01","spc4_enddate":"2001-01-01","spc4":11,"spc5_startdate":"2001-01-01","spc5_enddate":"2001-01-01","spc5":12,"spc6_startdate":"2001-01-01","spc6_enddate":"2001-01-01","spc6":13,"spc7_startdate":"2001-01-01","spc7_enddate":"2001-01-01","spc7":14,"spc8_startdate":"2001-01-01","spc8_enddate":"2001-01-01","spc8":15,"spc9_startdate":"2001-01-01","spc9_enddate":"2001-01-01","spc9":16,"spc10_startdate":"2001-01-01","spc10_enddate":"2001-01-01","spc10":17,"spc11_startdate":"2001-01-01","spc11_enddate":"2001-01-01","spc11":18,"spc12_startdate":"2001-01-01","spc12_enddate":"2001-01-01","spc12":19,"spc13_startdate":"2001-01-01","spc13_enddate":"2001-01-01","spc13":20}
+    ],"rowcount":1,"tablename":"day_segtype"},
+    "tod_plan":{"result":[
+        {"equip_id":20019,"seg_type":1,"begin_time":"00:00","plan_id":1,"priority_id":1},
+        {"equip_id":20019,"seg_type":1,"begin_time":"07:00","plan_id":2,"priority_id":2},
+        {"equip_id":20019,"seg_type":1,"begin_time":"09:00","plan_id":1,"priority_id":1},
+        {"equip_id":20019,"seg_type":1,"begin_time":"17:00","plan_id":2,"priority_id":2},
+        {"equip_id":20019,"seg_type":1,"begin_time":"19:00","plan_id":1,"priority_id":1},
+        {"equip_id":20019,"seg_type":2,"begin_time":"00:00","plan_id":2,"priority_id":1},
+        {"equip_id":20019,"seg_type":2,"begin_time":"09:00","plan_id":2,"priority_id":2},
+        {"equip_id":20019,"seg_type":2,"begin_time":"14:00","plan_id":1,"priority_id":1},
+        {"equip_id":20019,"seg_type":2,"begin_time":"16:30","plan_id":2,"priority_id":2},
+        {"equip_id":20019,"seg_type":2,"begin_time":"20:00","plan_id":1,"priority_id":1}
+    ],"rowcount":10,"tablename":"tod_plan"},
+    "phase":{"result":[
+        {"phase_no":"0 ","phase_name":"普通二時相","phase_total":2},
+        {"phase_no":"1 ","phase_name":"早開二時相","phase_total":3},
+        {"phase_no":"2 ","phase_name":"遲閉二時相","phase_total":3},
+        {"phase_no":"3 ","phase_name":"雙早開二時相","phase_total":4},
+        {"phase_no":"4 ","phase_name":"雙遲閉二時相","phase_total":4}
+    ],"rowcount":5,"tablename":"phase"},
+    "priority_control":{"result":[
+        {"equip_id":20019,"priority_id":1,"manual_onoff":0,"auto_onoff":1,"headway_gap":3,"percentage_gap":10,"lowspeed_gap":5,"time_gap":60},
+        {"equip_id":20019,"priority_id":2,"manual_onoff":1,"auto_onoff":0,"headway_gap":2,"percentage_gap":15,"lowspeed_gap":5,"time_gap":60}
+    ],"rowcount":2,"tablename":"priority_control"}
+}
+
+

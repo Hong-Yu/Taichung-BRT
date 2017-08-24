@@ -1,0 +1,14 @@
+
+span.btn, button.btn{
+    font-weight: bold;
+}
+
+body {
+    padding-top: 10px;
+}
+
+button.sing_up {
+    float:right;
+    margin-bottom:10px;
+    height:30px;
+}

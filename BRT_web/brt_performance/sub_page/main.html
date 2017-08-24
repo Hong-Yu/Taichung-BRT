@@ -1,0 +1,161 @@
+
+
+<div style="width:850px;height:20px;"></div>
+<div id="googleMap" class="google_map" style="width:850px;height:400px;"></div>
+
+    <h6 id="time_field"></h6>
+<div class="waiting_message" style="padding-top:50px;text-align:center;">
+    <p style="font-size:25px;font-weight:bold;color:#FF6600;">選擇路段後 顯示詳細資訊 ...</p>
+</div>
+
+<div class="route_sketch" style="">
+    <svg id="illustration" width="600" height="120">
+        <text x="0" y="20">靜</text>
+        <text x="0" y="35">宜</text>
+        <text x="0" y="50">大</text>
+        <text x="0" y="65">學</text>
+        <text x="0" y="80">方</text>
+        <text x="0" y="95">向</text>
+        <text class="name_begin" x="110" y="20" style="text-align: center;"></text>
+        <text class="name_end" x="430" y="20"></text>
+        <text x="585" y="20">台</text>
+        <text x="585" y="35">中</text>
+        <text x="585" y="50">火</text>
+        <text x="585" y="65">車</text>
+        <text x="585" y="80">站</text>
+        <text x="585" y="95">方</text>
+        <text x="585" y="110">向</text>
+        <line x1="30" y1="40" x2="130" y2="40" style="stroke:rgb(0,0,255);stroke-width:4;"></line>
+        <line x1="30" y1="60" x2="130" y2="60" style="stroke:rgb(0,0,0);stroke-width:2;"></line>
+        <line x1="30" y1="80" x2="130" y2="80" style="stroke:rgb(0,0,0);stroke-width:2;"></line>
+        <line x1="30" y1="100" x2="130" y2="100" style="stroke:rgb(102,204,255);stroke-width:4;"></line>
+        <line x1="140" y1="105" x2="140" y2="35" style="stroke:black;stroke-width:9;"></line>
+        <polygon points="30,45 30,35 20,40" style="fill:blue;"></polygon>
+        <polygon points="30,65 30,55 20,60" style="fill:black;"></polygon>
+
+        <line class="west_bus" x1="150" y1="40" x2="450" y2="40" style="stroke:rgb(0,0,255);stroke-width:4;"></line>
+        <line class="west_car" x1="150" y1="60" x2="450" y2="60" style="stroke:rgb(0,0,0);stroke-width:2;"></line>
+        <line class="east_car" x1="150" y1="80" x2="450" y2="80" style="stroke:rgb(0,0,0);stroke-width:2;"></line>
+        <line class="east_bus" x1="150" y1="100" x2="450" y2="100" style="stroke:rgb(102,204,255);stroke-width:4;"></line>
+        <line x1="460" y1="105" x2="460" y2="35" style="stroke:black;stroke-width:9;"></line>
+
+        <line x1="470" y1="40" x2="570" y2="40" style="stroke:rgb(0,0,255);stroke-width:4;"></line>
+        <line x1="470" y1="60" x2="570" y2="60" style="stroke:rgb(0,0,0);stroke-width:2;"></line>
+        <line x1="470" y1="80" x2="570" y2="80" style="stroke:rgb(0,0,0);stroke-width:2;"></line>
+        <line x1="470" y1="100" x2="570" y2="100" style="stroke:rgb(102,204,255);stroke-width:4;"></line>
+        <polygon points="570,85 570,75 580,80" style="fill:black;"></polygon>
+        <polygon points="570,105 570,95 580,100" style="fill:rgb(102,204,255);"></polygon>
+    </svg>
+</div>
+
+
+<table class="info_table">
+    <tr>
+        <td colspan="4">
+            <div class="info_title">路段資訊</div>
+        </td>
+        <td colspan="8">
+            <div class="info_title">旅行時間資訊</div>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="6"></td>
+        <td colspan="2"><div class=" info_sub_title">快捷巴士</div></td>
+        <td colspan="2"><div class=" info_sub_title">小客車</div></td>
+        <td colspan="2"><div class=" info_sub_title">減少百分比</div></td>
+    </tr>
+    <tr>
+        <td colspan="2"><div class=" info_sub_title">起站</div></td>
+        <td colspan="1"><div class=" info_body">B01</div></td>
+        <td colspan="1"></td>
+        <td colspan="2"><div class=" info_sub_title">B1 -> B2</div></td>
+        <td colspan="2"><div class=" info_body">1.5 mins</div></td>
+        <td colspan="2"><div class=" info_body">2.3 mins</div></td>
+        <td colspan="2"><div class=" info_body">35% </div></td>
+    </tr>
+    <tr>
+        <td colspan="2"><div class=" info_sub_title">迄站</div></td>
+        <td colspan="1"><div class=" info_body">B01</div></td>
+        <td colspan="1"></td>
+        <td colspan="2"><div class=" info_sub_title">B1 <- B2</div></td>
+        <td colspan="2"><div class=" info_body">1.5 mins</div></td>
+        <td colspan="2"><div class=" info_body">2.3 mins</div></td>
+        <td colspan="2"><div class=" info_body">35% </div></td>
+    </tr>
+    <tr>
+        <td colspan="2"><div class=" info_sub_title">起訖站距離</div></td>
+        <td colspan="1"><div class=" info_body">B01</div></td>
+        <td colspan="1"></td>
+        <td colspan="2"><div class=" info_sub_title">總路線(正向)</div></td>
+        <td colspan="2"><div class=" info_body">1.5 mins</div></td>
+        <td colspan="2"><div class=" info_body">2.3 mins</div></td>
+        <td colspan="2"><div class=" info_body">35% </div></td>
+    </tr>
+    <tr>
+        <td colspan="2"><div class=" info_sub_title">路線距離</div></td>
+        <td colspan="1"><div class=" info_body">B01</div></td>
+        <td colspan="1"></td>
+        <td colspan="2"><div class=" info_sub_title">總路線(反向)</div></td>
+        <td colspan="2"><div class=" info_body">1.5 mins</div></td>
+        <td colspan="2"><div class=" info_body">2.3 mins</div></td>
+        <td colspan="2"><div class=" info_body">35% </div></td>
+    </tr>
+    <!--<tr>-->
+        <!--<td>1</td> <td>2</td><td>3</td><td>4</td>-->
+        <!--<td>5</td> <td>6</td><td>7</td><td>8</td>-->
+        <!--<td>9</td> <td>10</td><td>11</td><td>12</td>-->
+    <!--</tr>-->
+</table>
+
+<!--<div class="route_section_info" style="width:800px">-->
+    <!--<div class="row-fluid">-->
+        <!--<div class="col-md-4 info_title">路段資訊</div>-->
+        <!--<div class="col-md-8 info_title">旅行時間資訊</div>-->
+    <!--</div>-->
+    <!--<div class="row">-->
+        <!--<div class="col-md-6"></div>-->
+        <!--<div class="col-md-2 info_sub_title">快捷巴士</div>-->
+        <!--<div class="col-md-2 info_sub_title">小客車</div>-->
+        <!--<div class="col-md-2 info_sub_title">減少百分比</div>-->
+    <!--</div>-->
+    <!--<div class="row">-->
+        <!--<div class="col-md-2 info_sub_title">起站</div>-->
+        <!--<div class="col-md-1 info_body">B01</div>-->
+        <!--<div class="col-md-1">-</div>-->
+        <!--<div class="col-md-2 info_sub_title">B1 -> B2</div>-->
+        <!--<div class="col-md-2 info_body">1.5 mins</div>-->
+        <!--<div class="col-md-2 info_body">2.3 mins</div>-->
+        <!--<div class="col-md-2 info_body">35% </div>-->
+    <!--</div>-->
+    <!--<div class="row">-->
+        <!--<div class="col-md-2 info_sub_title">迄站</div>-->
+        <!--<div class="col-md-1 info_body">B02</div>-->
+        <!--<div class="col-md-1">-</div>-->
+        <!--<div class="col-md-2 info_sub_title">B1 <- B2</div>-->
+        <!--<div class="col-md-2 info_body">2.7 mins</div>-->
+        <!--<div class="col-md-2 info_body">4.3 mins</div>-->
+        <!--<div class="col-md-2 info_body">50% </div>-->
+    <!--</div>-->
+    <!--<div class="row">-->
+        <!--<div class="col-md-2 info_sub_title">起訖站距離</div>-->
+        <!--<div class="col-md-1 info_body">350m</div>-->
+        <!--<div class="col-md-1">-</div>-->
+        <!--<div class="col-md-2 info_sub_title">總路線(正向)</div>-->
+        <!--<div class="col-md-2 info_body">9.5 mins</div>-->
+        <!--<div class="col-md-2 info_body">10.3 mins</div>-->
+        <!--<div class="col-md-2 info_body">5% </div>-->
+    <!--</div>-->
+    <!--<div class="row">-->
+        <!--<div class="col-md-2 info_sub_title">路線距離</div>-->
+        <!--<div class="col-md-1 info_body">1.5km</div>-->
+        <!--<div class="col-md-1">-</div>-->
+        <!--<div class="col-md-2 info_sub_title">總路線(反向)</div>-->
+        <!--<div class="col-md-2 info_body">6.5 mins</div>-->
+        <!--<div class="col-md-2 info_body">9.3 mins</div>-->
+        <!--<div class="col-md-2 info_body">27% </div>-->
+    <!--</div>-->
+<!--</div>-->
+
+
+
+

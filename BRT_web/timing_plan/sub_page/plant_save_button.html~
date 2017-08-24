@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+'<div style="height:100%;padding:10px;padding-top:10px;">\
+    <a class="calender_insert_pointer" style="display:none;"></a>\
+    <a class="data_header_insert_point" style="display:none;"></a>\
+    \
+    <div style="height:100px;text-align:right;clear:both;">\
+        <span class="btn btn-large btn-inverse post_1">上傳</span>\
+        <span class="btn btn-large btn-inverse update_1">更新</span>\
+        <span class="btn btn-large btn-inverse abc">放棄</span>\
+        <span class="btn btn-large btn-inverse">保存</span>\
+    </div>\
+</div>'
+</body>
+</html>

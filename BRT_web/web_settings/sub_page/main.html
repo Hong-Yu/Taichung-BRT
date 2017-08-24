@@ -1,0 +1,33 @@
+<div ng-controller="WebSettingsController">
+    <pre class="alert alert-info" >{{http_service.mytime | date:'shortTime' }}  {{http_service.message}}</pre>
+    <button class="btn btn-primary" style="float:right;margin-left:50px" ng-click="CreateDefaultValue()">還原預設值</button>
+    <button class="btn btn-primary" ng-click="http_service.PermissionLevelUpdate(permission_data)" style="float:right;">套　　用</button>
+    <div style="clear:both;"></div>
+    <table class="table table-bordered table-hover" ng-show="true">
+        <thead>
+        <tr>
+            <th>功能名稱</th>
+            <!--<th>系統開發者</th>-->
+            <th>系統管理員</th>
+            <th>一般使用者</th>
+            <th>訪客</th>
+        </tr>
+        </thead>
+        <tbody >
+        <tr ng-repeat="name in function_names">
+            <td>{{name}}</td>
+            <td><input type="checkbox" ng-model="permission_data[1][column_name[$index]]"></td>
+            <td><input type="checkbox" ng-model="permission_data[2][column_name[$index]]"></td>
+            <td><input type="checkbox" ng-model="permission_data[3][column_name[$index]]"></td>
+
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+
+
+<!--var column_name = ['level', "accident", "account_manager", 'brt_performance',-->
+<!--'device_control', 'device_manager', 'device_status', 'device_status_table',-->
+<!--'history', 'intersection_info', 'live_status', 'live_status_sketch',-->
+<!--'phase_lighting', 'phase_modify', 'route_manager', 'scheduling', 'time_space_diagram', 'timing_plan', 'timing_plan_query'];-->

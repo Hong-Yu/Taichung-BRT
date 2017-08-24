@@ -1,0 +1,20 @@
+.labels {
+    color: red;
+    background-color: white;
+    font-family: "Lucida Grande", "Arial", sans-serif;
+    font-size: 9px;
+    font-weight: bold;
+    text-align: center;
+    width: 40px;
+    border: 2px solid black;
+    white-space: nowrap;
+}
+
+.dialogue_input_box {
+    /*visibility:hidden;*/
+    background:#ffffff;
+    border:1px solid #8888ff;
+    z-index:11;
+    position:relative;
+    width:220px;
+}

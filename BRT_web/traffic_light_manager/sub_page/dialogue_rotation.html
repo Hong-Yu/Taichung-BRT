@@ -1,0 +1,16 @@
+<table class="coordinate">
+    <td >{{google_map_marker.intersection_id}}</td>
+    <td >-</td>
+    <td >{{google_map_marker.card_id}}</td>
+</table>
+<form id="controller_input_box">
+    <div style="font-size:16px;">
+        <input type="number" class="form-control int_id"  placeholder="請輸入旋轉角度。" ng-model="google_map_marker.rotation">
+    </div>
+</form>
+
+<div style="width:10px;float:left;"></div>
+<div style="float:right;">
+    <button class="btn btn-primary submit" ng-click="UpdateRotation()">確認</button>
+    <button class="btn btn-primary cancel">取消</button>
+</div>

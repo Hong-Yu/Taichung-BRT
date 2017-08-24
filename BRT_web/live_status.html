@@ -1,0 +1,64 @@
+<!doctype html >
+<html lang="zh-TW" style="height:100%;" ng-app="ui.bootstrap.demo">
+<head>
+    <meta charset="UTF-8">
+    <!-- Safari -->
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <title>BRT快捷公車資訊系統</title>
+    <!-- JQuery -->
+    <script src="lib/jquery-1.10.2.min.js"></script>
+    <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>-->
+    <!-- Google Map -->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script src="lib/google_map_jquery_builder.js"></script>
+    <script type="text/javascript" src="lib/google_maps_utility/markerwithlabel.js"></script>
+
+    <!-- Boostrap  && Boostrap css-->
+    <link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <!--Angular.Js and Bootsrtap UI-->
+    <script type="text/javascript" src="lib/angular.js"></script>
+    <script type="text/javascript" src="lib/ui-bootstrap-tpls-0.11.2.min.js"></script>
+    <script type="text/javascript" src="live_status/java_script/tabs_app.js"></script>
+
+    <link href="live_status/css/form.css" rel="stylesheet">
+</head>
+<body style="height:100%;padding:0px;margin:0px;overflow-y:scroll;min-width:1024px;width:1024px;margin:auto;">
+<!-- <body style="height:100%;padding:0px;margin:0px;overflow-y:scroll;min-width:1024px;width:100%;margin:auto;"> -->
+<!-- 上方的 modal 物件 -->
+<div class="top_stretch" style="position:fixed;width:100%;background-color:silver;opacity:0.5;z-index:100;">
+
+</div>
+
+
+
+
+<table>
+    <td id="centerview" style="vertical-align:top;width:750px">
+        <!-- 內頁 -->
+    </td>
+</table>
+<div status-dynamic></div>
+
+
+<!--<script src="http://192.168.1.199:7000/socket.io/socket.io.js"></script>-->
+<!-- 載入模組 -->
+<script src="live_status/trash/pseudo_data.js"></script>
+<script src="live_status/java_script/information_table.js"></script>
+<script src="live_status/java_script/web_socket.js"></script>
+<script src="live_status/java_script/arrow_schema.js"></script>
+<script src="live_status/java_script/map_manager.js"></script>
+<script src="live_status/java_script/map_location_event.js"></script>
+<script src="live_status/java_script/map_intersection.js"></script>
+<script src="live_status/java_script/map_bus.js"></script>
+<script src="live_status/java_script/map_light.js"></script>
+<script src="live_status/java_script/main.js"></script>
+
+<!-- Includer -->
+<!--<script src="library/includer.js"></script>-->
+
+<script>
+    LiveStatusMain();
+</script>
+</body>
+</html>

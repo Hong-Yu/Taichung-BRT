@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        function SetCoolie(cname, cvalue, exminute) {
+            console.log('set cookie 2');
+            var date = new Date();
+            date.setTime(date.getTime() + (exminute*60*1000));
+            var expires = 'expires='+ date.toUTCString();
+            document.cookie = cname + '=' + cvalue + '; ' + expires;
+//            document.cookie = "username = maeda";
+        }
+        function GetCoolie(cname) {
+            console.log(document.cookie);
+
+            var cookie_array = document.cookie.split(';');
+            for (var index = 0; index < cookie_array.length; index++) {
+                var specified_cookie = cookie_array[index];
+                // remove space character at string head.
+                while (specified_cookie.charAt(0) == ' ') specified_cookie = specified_cookie.substring(1);
+                var label = specified_cookie.split('=')[0];
+                if (label == cname) return specified_cookie.split('=')[1];
+            }
+            return '';
+        }
+    </script>
+</head>
+<body>
+<script>
+    SetCoolie('taichung_brt', 'akb48', 1);
+    var cookie = GetCoolie('taichung_brt');
+    console.log('get cookie', cookie);
+
+</script>
+
+</body>
+</html>

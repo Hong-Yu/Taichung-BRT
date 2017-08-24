@@ -1,0 +1,18 @@
+<table border="1" style="width:125px;text-align:left;">
+    <tr>
+        <th>時差</th>
+        <td>0</td>
+    </tr>
+    <tr>
+        <th> 週期</th>
+        <td> 160</td>
+    </tr>
+    <tr>
+        <th> 第一時相</th>
+        <td> 80</td>
+    </tr>
+    <tr>
+        <th> 第二時相</th>
+        <td> 80</td>
+    </tr>
+</table>

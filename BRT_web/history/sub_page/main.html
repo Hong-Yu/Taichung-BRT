@@ -1,0 +1,123 @@
+
+
+<div ng-controller="HistoryForm">
+    <pre class="alert alert-info" >{{mytime | date:'shortTime' }}</pre>
+</div>
+
+<div>
+    <div ng-controller="TimepickerDemoCtrl" class="time_start" >
+        <pre class="alert alert-info" style="display:none;">{{mytime | date:'HH:mm'}}</pre>
+        <input class="date start" type="date" value="2014-08-24" >
+        <timepicker ng-model="mytime" ng-change="changed()" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></timepicker>
+    </div>
+        <span style="float:left;margin:32px 0px 0px 70px;">
+            to
+        </span>
+    <div ng-controller="TimepickerEnd" class="time_end">
+        <pre class="alert alert-info" style="display:none;">{{mytime | date:'HH:mm'}}</pre>
+        <timepicker ng-model="mytime" ng-change="changed()" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></timepicker>
+        <input class="date end" type="date" value="2014-08-26">
+    </div>
+</div>
+
+<div style="clear:both;"></div>
+<!-- Standard button -->
+<div ng-controller="HistoryForm">
+    <div class="option_zone history" selected_type="priority_operate" >
+        <button type="button" class="btn btn-default" ng-click="setPurpose('priority_operate')">優先號誌啟動操作記錄</button>
+        <button type="button" class="btn btn-default" ng-click="setPurpose('priority_strategy')">優先號誌運作狀態歷史資料</button>
+        <button type="button" class="btn btn-default" ng-click="setPurpose('trigger_point')">觸發點歷史資料</button>
+        <button type="button" class="btn btn-default" ng-click="setPurpose('travel_time')">旅行時間歷史資料</button>
+    </div>
+    <button class="btn btn-primary" style="float:right;margin-left:50px" onclick="window.print()">列　　印</button>
+    <button class="btn btn-primary" ng-click="Fetch()" style="float:right;">查　　詢</button>
+    <div style="clear:both;"></div>
+
+    <div style="width:70%" ng-show="isPurpose('travel_time')">
+    <canvas id="myChart" width="800" height="300"></canvas>
+    </div>
+
+    <table class="table table-bordered table-hover" ng-show="isPurpose('priority_operate')">
+        <thead>
+        <tr>
+            <th>時間</th>
+            <th>帳號</th>
+            <th>設備編號</th>
+            <th>時段型態</th>
+            <th>時段</th>
+            <th>優先號誌</th>
+        </tr>
+        </thead>
+        <tbody >
+        <tr ng-repeat="datum in history_data">
+            <td>{{datum.operated_date | date: 'y-M-d h:mm a'}}</td>
+            <td>{{datum.user_name}}</td>
+            <td>{{datum.equip_id}}</td>
+            <td>{{datum.seg_type}}</td>
+            <td>{{datum.begin_time}}</td>
+            <td>{{datum.priority_switch}}</td>
+        </tr>
+        </tbody>
+    </table>
+    <!--var column_names = ["operated_date", "user_name", "equip_id", "seg_type", "begin_time", "priority_switch"];-->
+    <table class="table table-bordered table-hover" ng-show="isPurpose('priority_strategy')">
+        <thead>
+        <tr>
+            <th>時間</th>
+            <th>設備編號</th>
+            <th>方向</th>
+            <th>策略</th>
+        </tr>
+        </thead>
+        <tbody >
+        <tr ng-repeat="datum in history_data">
+            <td>{{datum.create_time | date: 'y-M-d h:mm a'}}</td>
+            <td>{{datum.equip_id}}</td>
+            <td>{{datum.dir}}</td>
+            <td>{{datum.strategy}}</td>
+        </tr>
+        </tbody>
+    </table>
+    <!--var column_names = ["create_time", "equip_id", "dir", "strategy"];-->
+    <table class="table table-bordered table-hover" ng-show="isPurpose('trigger_point')">
+        <thead>
+        <tr>
+            <th>時間</th>
+            <th>設備編號</th>
+            <th>方向</th>
+            <th>車輛編號</th>
+            <th>觸發點</th>
+        </tr>
+        </thead>
+        <tbody >
+        <tr ng-repeat="datum in history_data">
+            <td>{{datum.create_time | date: 'y-M-d h:mm a'}}</td>
+            <td>{{datum.equip_id}}</td>
+            <td>{{datum.dir}}</td>
+            <td>{{datum.plate_number}}</td>
+            <td>{{datum.point}}</td>
+        </tr>
+        </tbody>
+    </table>
+    <!--var column_names = ["create_time", "equip_id", "dir", "plate_number", "point"];-->
+    <table class="table table-bordered table-hover" ng-show="isPurpose('travel_time')">
+        <thead>
+        <tr>
+            <th>時間</th>
+            <th>巴士站 (起)</th>
+            <th>巴士站 (迄)</th>
+            <th>平均旅行時間</th>
+        </tr>
+        </thead>
+        <tbody >
+        <tr ng-repeat="datum in history_data">
+            <td>{{datum.time | date: 'y-M-d h:mm a'}}</td>
+            <!--<td>{{datum.time}}</td>-->
+            <td>{{datum.station_start}}</td>
+            <td>{{datum.station_end}}</td>
+            <td>{{datum.travel_time}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+

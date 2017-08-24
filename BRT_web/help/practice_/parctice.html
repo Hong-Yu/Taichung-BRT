@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <style type="text/css">
+        #panel, #flip {
+            padding:5px;
+            text-align:center;
+            background-color:#e5eecc;
+            border:solid 1px #c3c3c3;
+        }
+        #panel {
+            padding:50px;
+            /*display:none;*/
+        }
+    </style>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <!--Boostrap Datepicker-->
+    <script type="text/javascript" src="../lib/bootstrap-datepicker/js/bootstrap-datepicker.js" charset="UTF-8"></script>
+    <link href="../lib/bootstrap-datepicker/css/datepicker.css" rel="stylesheet" media="screen">
+</head>
+<body>
+<p id="txt">AKB48 Maeda Atsuko</p>
+<div id="div4" style="position:relative;">
+<img src="images.jpg">
+</div>
+<p style="display:none;">If you click on the "Hide" button, I will disappear.</p>
+<button id="hide">Start Animation</button>
+<button id="show">Fade Out</button>
+<button id="toggle">Fade Toggle</button>
+<br><br>
+<div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+<div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+<div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+
+<div id="flip">Click to slide the panel down or up</div>
+<div id="panel">Hello world!</div>
+<!--<div class="progress progress-striped active">-->
+    <!--<div class="progress-bar progress-bar-info"  role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">-->
+        <!--<span class="sr-only">45% Complete</span>-->
+    <!--</div>-->
+<!--</div>-->
+
+
+
+
+</body>
+<script>
+    $(document).ready(function() {
+        $("#hide").click(function() {
+            $("#div4").animate({
+                left:'800px'
+            },3000);
+            $("#div4").animate({
+                opacity: 0.5
+            },3000);
+        });
+        $("#show").click(function() {
+            $("#div4").fadeOut(3000);
+        });
+        $("#toggle").click(function() {
+            $("#div4").fadeToggle(3000);
+        });
+        $("#flip").click(function(){
+            $("#panel").slideToggle("slow");
+        });
+
+    });
+//    function TimeEvent() {
+//        console.log("trigger");
+//        document.getElementById("txt").innerHTML = "love";
+//    }
+//    setTimeout("TimeEvent()", 3000);
+</script>
+</html>

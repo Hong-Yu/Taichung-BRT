@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <!--jQuery lib from google sever-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+<h2>JSON Object Creation in JavaScript</h2>
+<p>
+    Name: <span id="jname"></span><br />
+    Age: <span id="jage"></span><br />
+    Address: <span id="jstreet"></span><br />
+    Phone: <span id="jphone"></span><br />
+</p>
+<script>
+    var JSONObject = {
+        "name":"John Johnson",
+        "street":"Oslo West 555",
+        "age":33,
+        "phone":"555 1234567"
+    };
+
+    function Inner (data) {
+        console.log(data);
+        //var obj = JSON.parse(data);
+        //console.log(obj);
+        document.getElementById("jname").innerHTML = data.ordinaryPeakAm[2].chineseName;
+        document.getElementById("jage").innerHTML = data.ordinaryPeakAm[2].name;
+        document.getElementById("jstreet").innerHTML = data.ordinaryPeakAm[2].period;
+    }
+    function GetAlert (data,status) {
+        //alert("Data: " + data +"\nStatus:" + status);
+        Inner(data);
+    }
+//    var obj = eval ("(" + txt + ")");
+
+    $.get("src/phase_information.json", GetAlert);
+
+
+
+    document.getElementById("jphone").innerHTML = JSONObject.phone;
+</script>
+</body>
+</html>

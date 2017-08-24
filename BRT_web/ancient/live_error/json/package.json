@@ -1,0 +1,5 @@
+{
+    "name": "application-name",
+    "version": "0.0.1",
+    "section_information": [{"title": "快捷巴士進場時間", "content": "11:00:15"}, {"title": "切換時間", "content": "3s"}]
+}

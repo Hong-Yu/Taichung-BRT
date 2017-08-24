@@ -1,0 +1,22 @@
+.bs-callout {
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #eee;
+    border-left-width: 5px;
+    border-radius: 3px;
+}
+.divmap{
+    position: absolute;
+    top: 00px;
+    left: 00px;
+}
+.divinfo {
+    position: absolute;
+    top: 00px;
+    left: 00px;
+}
+.tab{
+    font-weight:bold;
+    font-size: medium;
+    cursor:pointer;
+}

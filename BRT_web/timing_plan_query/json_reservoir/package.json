@@ -1,0 +1,6 @@
+{
+   "priority_control":{"result":[
+      {"equip_id":20019,"priority_id":1,"manual_onoff":0,"auto_onoff":1,"headway":3,"lowspeed":5,"door_trigger":60,"percentage1":null,"percentage2":null,"percentage3":null,"percentage4":null,"percentage5":null,"percentage6":null},
+      {"equip_id":20019,"priority_id":2,"manual_onoff":1,"auto_onoff":0,"headway":2,"lowspeed":5,"door_trigger":60,"percentage1":null,"percentage2":null,"percentage3":null,"percentage4":null,"percentage5":null,"percentage6":null}
+   ],"rowcount":2,"tablename":"priority_control"}
+}

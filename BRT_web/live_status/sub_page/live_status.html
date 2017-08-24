@@ -1,0 +1,116 @@
+<!--<div class='col-sm-6 col-md-4 current_intersection' style='width:280px;float:left;'>-->
+    <div class="thumbnail" >
+        <div class="caption" style="font-weight:bold;" ng-controller="PanelController as panel">
+            <ul class="nav nav-tabs nav-justified tab" style="font-weight:bold;">
+                <li class="name" style='float:right;'>未知的路口</li>
+                <li ng-class="{ active:panel.isSelected(1) }" mark="live" style="cursor:pointer;">
+                    <a ng-click="panel.selectTab(1)">即時資訊</a>
+                </li>
+                <li ng-class= "{ active:panel.isSelected(2) }" mark="history" style="cursor:pointer;">
+                    <a ng-click="panel.selectTab(2)">歷史資訊</a>
+                </li>
+            </ul>
+            <table class="table table-striped table-bordered info_table">
+                <!--"時相步階", "綠燈倒數", "路口狀態", "優先策略", "p1訊息", "p2訊息", "p3訊息", "p4訊息"-->
+                <col width="100">
+                <col width="100">
+                <col width="100">
+                <tr>
+                    <th>方向</th>
+                    <th>靜宜大學</th>
+                    <th>火車站</th>
+                </tr>
+                <tr ng-show="panel.isSelected(1)">
+                    <td>接收時間</td>
+                    <td class="receive_time" colspan="2" style="text-align:center;"></td>
+                </tr>
+                <!--<tr ng-show="panel.isSelected(1)">-->
+                    <!--<td>路口燈態</td>-->
+                    <!--<td class="" colspan="2" style="text-align:center;"></td>-->
+                <!--</tr>-->
+                <tr ng-show="panel.isSelected(1)">
+                    <td>優先狀態</td>
+                    <td class="priority_status" colspan="2" style="text-align:center;"></td>
+                </tr>
+                <tr ng-show="panel.isSelected(1)">
+                    <td>優先策略</td>
+                    <td class="priority_strategy_live east"></td>
+                    <td class="priority_strategy_live west"></td>
+                </tr>
+                <tr ng-show="panel.isSelected(2)">
+                    <td>最近優先策略</td>
+                    <td class="priority_strategy_history east"></td>
+                    <td class="priority_strategy_history west"></td>
+                </tr>
+                <tr>
+                    <td >分相</td>
+                    <td class="phase east" colspan="2" style="text-align:center;"></td>
+                </tr>
+                <tr>
+                    <td >時相步階</td>
+                    <td class="phase_step east" colspan="2" style="text-align:center;"></td>
+                </tr>
+                <tr ng-show="panel.isSelected(1)">
+                    <td>綠燈倒數</td>
+                    <td class="countdown east" colspan="2" style="text-align:center;"></td>
+                </tr>
+                <tr  ng-show="panel.isSelected(2)">
+                    <td>車輛編號</td>
+                    <td class="car_id east"></td>
+                    <td class="car_id west"></td>
+                </tr>
+                <tr  ng-show="panel.isSelected(2)">
+                    <td>預期下班到達時間</td>
+                    <td class="bus_arrival_time east"></td>
+                    <td class="bus_arrival_time west"></td>
+                </tr>
+                <tr ng-show="panel.isSelected(1)">
+                    <td>p0</td>
+                    <td class="p0 east"></td>
+                    <td class="p0 west"></td>
+                </tr>
+                <tr ng-show="panel.isSelected(1)">
+                    <td>p1</td>
+                    <td class="p1 east"></td>
+                    <td class="p1 west"></td>
+                </tr>
+                <tr ng-show="panel.isSelected(1)">
+                    <td>p2</td>
+                    <td class="p2 east"></td>
+                    <td class="p2 west"></td>
+                </tr>
+                <tr ng-show="panel.isSelected(1)">
+                    <td>p3</td>
+                    <td class="p3 east"></td>
+                    <td class="p3 west"></td>
+                </tr>
+                <tr ng-show="panel.isSelected(1)">
+                    <td>p4</td>
+                    <td class="p4 east"></td>
+                    <td class="p4 west"></td>
+                </tr>
+                <tr ng-show="panel.isSelected(1)">
+                    <td>p5</td>
+                    <td class="p5 east"></td>
+                    <td class="p5 west"></td>
+                </tr>
+                <tr ng-show="panel.isSelected(2)">
+                    <td>最近通過時間</td>
+                    <td class="p6 east"></td>
+                    <td class="p6 west"></td>
+                </tr>
+                <tr ng-show="panel.isSelected(2)">
+                    <td>今日優先策略累積次數</td>
+                    <td class="priority_strategy_count east"></td>
+                    <td class="priority_strategy_count west"></td>
+                </tr>
+            </table>
+            <!--<p class="strategy_diagram" style="height:15px">-->
+                <!--<a style="width:90px" class="btn btn-success" role="button">綠燈</a>-->
+                <!--<a style="width:45px" class="btn btn-danger" role="button">紅燈</a>-->
+                <!--&lt;!&ndash;<a style="width:45px" class="btn btn-success" role="button">綠燈</a>&ndash;&gt;-->
+            <!--</p>-->
+        </div>
+    </div>
+<!--</div>-->
+<!--</div>-->

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        img {
+            width:400px;
+            padding:10px;
+            border-style:dotted solid;
+            border-width:medium;
+            /*border:5px solid gray;*/
+            /*margin:10%;*/
+            float:right;
+        }
+        a:link {color:#ff0000}
+        /*a:visited {color:#00ff00}*/
+        a:hover {color:#ff00ff}
+        a:active {color:#0000ff}
+        a:link {text-decoration:none;background-color:#b2ff99}
+        table {
+            border-collapse:collapse;
+            width:30%;
+        }
+        td {
+            height:50px;
+            text-align:right;
+            vertical-align:bottom;
+            padding:15px;
+        }
+        table, th, td {
+            border:1px solid green;
+        }
+        th {
+            background-color:green;
+            color:white;
+        }
+        caption {caption-side:bottom;}
+    </style>
+</head>
+<body>
+<img src="1302110.jpg">
+<p><b><a href="default.asp" target="_blank">This is a link</a></b></p>
+<p><b>Note:</b> a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective.</p>
+<table>
+    <caption>Table 1.1 customers</caption>
+    <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+    </tr>
+    <tr>
+        <td>Peter</td>
+        <td>Griffin</td>
+    </tr>
+    <tr>
+        <td>Lois</td>
+        <td>Griffin</td>
+    </tr>
+</table>
+<script>
+    // Object
+    var  Story = {
+         love: function() {
+             console.log("love story");
+             this.strange();
+        },
+        strange: function () {
+            console.log("strange story");
+        }
+    }
+    var one = 1;
+    if (window.one === one) {
+        console.log("true");
+        Story.love();
+        //Story.strange();
+    }
+// Define person construct function in order to create custom Person() object later.
+var Person = function (living, age, gender) {
+    this.living = living;
+    this.age = age;
+    this.gender = gender;
+    this.getGender = function () { return this.gender;}
+}
+// Instantiate a person object and store it in the cody variable.
+    var cody = new Person(true, 33, 'male');
+    console.log(cody);
+</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+cct project 192.168.1.17:3001
+
+#Share folder
+\\192.168.1.17
+
+export MAKE='/usr/bin/gmake -i'
+/usr/lib
+cp -afr /usr/loval/lib/libjson-c* ./
+ldd file
+
+// computer information
+\\192.168.1.17 user user share/raid2
+192.168.1.7:5589
+
+03 6562166

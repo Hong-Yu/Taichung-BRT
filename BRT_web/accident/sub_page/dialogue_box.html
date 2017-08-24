@@ -1,0 +1,29 @@
+<form id="accident_input_box">
+    <div>
+        <input type="text" class="license_plate" size="40" maxlength="50" placeholder="請輸入車牌號碼" value="">
+        <input type="text" class="route"  maxlength="50" placeholder="請輸入路線" value="">
+        <input type="text" class="velocity_avg"  maxlength="50" placeholder="請輸入平均速度" value="">
+        <input type="text" class="intersection_near"  maxlength="50" placeholder="請輸入最接近路口" value="">
+        <input type="text" class="reason"  maxlength="50" placeholder="請輸入事故原因" value="">
+        <input type="text" class="lane_closed"  maxlength="50" placeholder="請輸入封閉車道數" value="">
+    </div>
+    <div class="form-group">
+        <label style="padding-left:5px;float:left;width:45px">經:</label>
+        <p class="longitude">123456</p>
+        <label style="padding-left:5px;float:left;width:45px">緯:</label>
+        <p class="latitude">123456</p>
+    </div>
+
+</form>
+<div style="float:right;">
+    <button class="btn btn-primary submit">確認</button>
+    <button class="btn btn-primary cancel">取消</button>
+</div>
+
+<!--//    license_plate nvarchar(50),-->
+<!--//    route nvarchar(50),-->
+<!--//    velocity_avg nvarchar(50),-->
+<!--//    intersection_near nvarchar(50),-->
+<!--//    reason nvarchar(50),-->
+<!--//    lane_closed int,-->
+<!--//    statement nvarchar(MAX)-->

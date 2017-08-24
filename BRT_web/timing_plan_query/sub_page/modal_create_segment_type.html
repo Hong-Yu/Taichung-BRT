@@ -1,0 +1,70 @@
+
+<!-- Button trigger modal -->
+<!--<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">-->
+<!--Launch demo modal-->
+<!--</button>-->
+
+<!-- Modal -->
+<div class="modal fade segment_type_modify" id="create_segment_type_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">請選擇時段類型</h4>
+            </div>
+            <div class="modal-body" style="margin:auto;width:90%;">
+                <div style="float:left;margin-left:34px;margin-right:20px;">
+                    <button type="button" class="btn btn-default btn-large" >一般日時段型態設定</button>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-default btn-large special_type" >特殊日時段型態設定</button>
+                </div>
+                <br>
+
+                <table class="normal_type" >
+                    <tr>
+                        <th>周內日</th>
+                        <th>時段1</th>
+                        <th>時段2</th>
+                        <th>時段3</th>
+                        <th>時段4</th>
+                        <th>時段5</th>
+                        <th>時段6</th>
+                        <th>時段7</th>
+                    </tr>
+                    <tr>
+                    <td>星期一</td>
+                        <td><input type="radio" name="monday"></td>
+                        <td><input type="radio" name="monday"></td>
+                        <td><input type="radio" name="monday"></td>
+                        <td><input type="radio" name="monday"></td>
+                        <td><input type="radio" name="monday"></td>
+                        <td><input type="radio" name="monday"></td>
+                        <td><input type="radio" name="monday"></td>
+                    </tr>
+                </table>
+                <table class="special_type" >
+                    <col width="130">
+                    <col width="130">
+                    <col width="80">
+                    <tr>
+                        <th>時段編號</th>
+                        <th>起始日期</th>
+                        <th>中止日期</th>
+                    </tr>
+                    <!--<tr>-->
+                        <!--<td>時段8</td>-->
+                        <!--<td><input type="date"></td>-->
+                        <!--<td><input type="date"></td>-->
+                    <!--</tr>-->
+                </table>
+
+
+            </div>
+            <div class="modal-footer" >
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary update" data-dismiss="modal">儲存變更</button>
+            </div>
+        </div>
+    </div>
+</div>

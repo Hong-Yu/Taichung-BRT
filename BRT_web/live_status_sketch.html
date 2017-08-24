@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-TW" style="height:100%;">
+<head>
+    <meta charset="UTF-8">
+    <!-- Safari -->
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <title>BRT快捷公車資訊系統</title>
+    <!-- JQuery -->
+    <script src="lib/jquery-1.10.2.min.js"></script>
+    <!--Bootstrap library-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="lib/bootstrap-3.1.1-dist/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="lib/bootstrap-3.1.1-dist/css/bootstrap-theme.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="lib/bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+    <!--Calculate-->
+    <script src="lib/calculate.js"></script>
+    <!-- Mobile Checker -->
+    <!--<script src="library/mobile.js"></script>-->
+    <script type="text/javascript"> </script>
+    <!--sketch map css-->
+    <link href="live_status_sketch/css/sketch_map.css" rel="stylesheet">
+</head>
+<body style="height:100%;padding:0px;margin:0px;overflow-y:scroll;min-width:1024px;width:1024px;margin:auto;">
+<!-- <body style="height:100%;padding:0px;margin:0px;overflow-y:scroll;min-width:1024px;width:100%;margin:auto;"> -->
+<!-- 上方的 modal 物件 -->
+<div class="top_stretch" style="position:fixed;width:100%;background-color:silver;opacity:0.5;z-index:100;">
+
+</div>
+<table>
+    <td id="centerview" style="vertical-align:top;width:750px">
+        <!-- 內頁 -->
+    </td>
+</table>
+
+<!--<script src="http://192.168.1.199:7000/socket.io/socket.io.js"></script>-->
+<!-- 載入模組 -->
+<!--<script src="route_manager/javascript/event_manager.js"></script>-->
+<script src="live_status_sketch/javascript/sketch_map.js"></script>
+<script src="live_status_sketch/javascript/event_manager.js"></script>
+<script src="live_status_sketch/javascript/route_map_manager.js"></script>
+<script src="live_status_sketch/javascript/insert_manager.js"></script>
+<script src="live_status_sketch/javascript/web_socket.js"></script>
+<script src="live_status_sketch/javascript/renew_state.js"></script>
+<script src="live_status_sketch/javascript/renew_light.js"></script>
+<script src="live_status_sketch/javascript/main.js"></script>
+<script src="live_status_sketch/javascript/table_insert.js"></script>
+
+<script>
+    LiveSketchMain();
+</script>
+</body>
+</html>

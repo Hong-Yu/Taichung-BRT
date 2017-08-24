@@ -1,0 +1,31 @@
+
+.context_menu{
+    visibility:hidden;
+    background:#ffffff;
+    border:1px solid #8888ff;
+    z-index:10;
+    position:relative;
+    width:140px;
+}
+.context_menu div{
+    padding-left:5px;
+    cursor:pointer;
+    white-space:nowrap;
+}
+
+.accident_input_box {
+    visibility:hidden;
+    background:#ffffff;
+    border:1px solid #8888ff;
+    z-index:11;
+    position:relative;
+    width:220px;
+}
+
+#accident_input_box div {
+    font-size:16px;
+}
+
+#accident_input_box input {
+    font-size:16px;
+}

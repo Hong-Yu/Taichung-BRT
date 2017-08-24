@@ -1,0 +1,43 @@
+select{
+    width: 60px;
+}
+.tr-a:hover{
+    background-color: #4cae4c;
+}
+
+.running_zone, .first_setting, .manage_title{
+    margin:20px;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+.running_btn{
+    padding:25px;
+    padding-top: 15px;
+    text-align: center;
+}
+
+.new_sche{
+    margin:20px;
+    margin-left: 50px;
+}
+
+#initial{
+	width: 500px;
+    padding:25px;
+    padding-top: 15px;
+    margin: 0px;
+}
+.info_sche {
+    padding:50px;
+    padding-top: 5px;
+}
+
+#main-setting, .main-table {
+	padding-left: 30px;
+}
+.btncss {
+	margin: 10px;
+}
+label {
+    cursor:pointer;
+}

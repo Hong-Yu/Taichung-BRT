@@ -1,0 +1,107 @@
+<div class="intersection">
+    <select class="intersection">
+    </select>
+</div>
+
+<div id="table_calendar" class="calendar">
+    <table class="table-bordered table table-hover scalendar sc1" style="width: 49%;height:220px;float:left;margin-left:0px;border-collapse:collapse;">
+        <tbody>
+        <tr >
+            <th class="btn-info cleft" style="cursor:pointer;"><span class="icon-backward" style="width:20px;height:20px;"></span></th>
+            <th colspan="6"  class="theader btn-warning"></th>
+        </tr>
+        <tr style="background-color:#FFCC66 !important;"><th>日</th><th>一</th><th>二</th><th>三</th><th>四</th><th>五</th><th>六</th></tr>
+        <tr><td class="d0 0"></td><td class="d1 1"></td><td class="d2 2"></td><td class="d3 3"></td><td class="d4 4"></td><td class="d5 5"></td><td class="d6 6"></td></tr>
+        <tr><td class="d7 7"></td><td class="d8 8"></td><td class="d9 9"></td><td class="d10 10"></td><td class="d11 11"></td><td class="d12 12"></td><td class="d13 13"></td></tr>
+        <tr><td class="d0 0"></td><td class="d1 1"></td><td class="d2 2"></td><td class="d3 3"></td><td class="d4 4"></td><td class="d5 5"></td><td class="d6 6"></td></tr>
+        <tr><td class="d7 7"></td><td class="d8 8"></td><td class="d9 9"></td><td class="d10 10"></td><td class="d11 11"></td><td class="d12 12"></td><td class="d13 13"></td></tr>
+        <tr><td class="d0 0"></td><td class="d1 1"></td><td class="d2 2"></td><td class="d3 3"></td><td class="d4 4"></td><td class="d5 5"></td><td class="d6 6"></td></tr>
+        <tr><td class="d7 7"></td><td class="d8 8"></td><td class="d9 9"></td><td class="d10 10"></td><td class="d11 11"></td><td class="d12 12"></td><td class="d13 13"></td></tr>
+        </tbody>
+    </table>
+    <table class="table-bordered table table-hover scalendar sc2" style="width: 49%;height:200px;float:right;margin-right:0px;border-collapse:collapse">
+        <tbody>
+        <tr><th colspan="6" class="theader btn-warning"></th><th class="btn-info cright" style="cursor:pointer;"><span class="icon-forward" style="width:20px;height:20px;"></span></th></tr>
+        <tr><th>日</th><th>一</th><th>二</th><th>三</th><th>四</th><th>五</th><th>六</th></tr>
+        <tr><td class="d0 0"></td><td class="d1 1"></td><td class="d2 2"></td><td class="d3 3"></td><td class="d4 4"></td><td class="d5 5"></td><td class="d6 6"></td></tr>
+        <tr><td class="d7 7"></td><td class="d8 8"></td><td class="d9 9"></td><td class="d10 10"></td><td class="d11 11"></td><td class="d12 12"></td><td class="d13 13"></td></tr>
+        <tr><td class="d0 0"></td><td class="d1 1"></td><td class="d2 2"></td><td class="d3 3"></td><td class="d4 4"></td><td class="d5 5"></td><td class="d6 6"></td></tr>
+        <tr><td class="d7 7"></td><td class="d8 8"></td><td class="d9 9"></td><td class="d10 10"></td><td class="d11 11"></td><td class="d12 12"></td><td class="d13 13"></td></tr>
+        <tr><td class="d0 0"></td><td class="d1 1"></td><td class="d2 2"></td><td class="d3 3"></td><td class="d4 4"></td><td class="d5 5"></td><td class="d6 6"></td></tr>
+        <tr><td class="d7 7"></td><td class="d8 8"></td><td class="d9 9"></td><td class="d10 10"></td><td class="d11 11"></td><td class="d12 12"></td><td class="d13 13"></td></tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="segment_type_setting domain">
+    <div class="segment_type_setting start">
+        <button class="btn-primary segment_type_modify">時段型態設定</button>
+    </div>
+    <div class="segment_type_setting end">
+        <button class="btn-success">設定完成</button>
+    </div>
+    <ul class="nav nav-tabs segment_type_modify" style="font-weight:bold;font-size:15px">
+    </ul>
+</div>
+
+<div class="segment_type">
+    <ul class="nav nav-tabs segtype_tab" style="font-weight:bold;font-size:15px">
+    </ul>
+</div>
+
+<div class="interval_modify" style="clear:both;text-align:right;margin:5px;">
+    <span id="time_section_delete" class="btn btn-deltime">刪除選取</span>
+    <!--<span id="time_section_add" class="btn btn-addtime">新增時間</span>-->
+</div>
+
+<table class="table table-bordered mainbody" id="timer_plan">
+    <thead>
+    <tr class="header">
+        <th  class="display-btn"><span style="cursor:pointer;" class="btn-icon icon-repeat reset_button"></span></th>
+        <th style="color:blue;text-align:center;font-size:12pt;font-weight:bold;width:174px;" colspan="3">計畫編號與起始時間</th>
+        <th style="color:blue;text-align:center;font-size:12pt;font-weight:bold;width:630px;" colspan="2">時制設定</th>
+    </tr>
+    </thead>
+    <tbody id="plan_table">
+
+    </tbody>
+    <tr id="time_section_add" style="cursor:pointer;"><th colspan="6"><span class="icon icon-plus "></span></th></tr>
+</table>
+
+<div style="height:100%;padding:10px;padding-top:10px;">
+    <a class="calender_insert_pointer" style="display:none;"></a>
+    <a class="data_header_insert_point" style="display:none;"></a>
+    <!--<div style="height:100px;text-align:right;clear:both;">-->
+        <!--<button class="btn btn-large btn-inverse timing_plan_upload">資料傳輸</button>-->
+    <!--</div>-->
+    <div style="height:50px;clear:both;float:right;">
+        <button class="btn btn-inverse timing_plan_upload" destination="database">更新時制計畫至資料庫</button>
+        <button class="btn btn-danger timing_plan_upload" destination="tc">下傳至控制器</button>
+    </div>
+</div>
+<div>
+    <table class="table table-bordered" >
+        <thead>
+        <tr class="header">
+            <th style="color:#537CCF;text-align:center;font-size:12pt;font-weight:bold;width:630px;" >通訊協定</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+</div>
+<div style="margin-left: 50px ; margin-right: auto ;">
+    <select multiple class="form-control" style="font-size:12pt;width:800px;height:140px">
+        <option>Waiting To Connect to Server ...</option>
+    </select>
+</div>
+<div class="progress progress-striped active">
+    <!--<div class="progress-bar progress-bar-info"  role="progressbar" data-transitiongoal="75" aria-valuenow="48" aria-valuemin="0" aria-valuemax="100" style="width: 0%">-->
+        <!--<span class="sr-only"></span>-->
+    <!--</div>-->
+</div>
+<!--<div class="progress">-->
+    <!--<div class="bar bar-success" style="width: 35%;"></div>-->
+    <!--<div class="bar bar-warning" style="width: 20%;"></div>-->
+    <!--<div class="bar bar-danger" style="width: 10%;"></div>-->
+<!--</div>-->

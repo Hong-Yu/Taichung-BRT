@@ -1,0 +1,150 @@
+<div class="intersection" >
+    <select>
+    </select>
+</div>
+<div class="set_zone query_zone row">
+    <div class="row">
+    <div class="col-md-6">
+        <h4 style="font-weight: bold;">查詢功能</h4>
+        <h5 id="current_section"></h5>
+    </div>
+    <div class="col-md-6" style="text-align: right;">
+         <!-- style="text-align: right;" -->
+        <button class="btn btn-success btn-xs" id="clean_result">清空查詢結果</button>
+    </div>
+    </div>
+    <div class="col-md-12" id="question_area">
+        <button class="btn btn-warning btn-sm" value="0F45">設備密碼查詢</button>
+        <button class="btn btn-warning btn-sm" value="0F42">設備日期查詢</button>
+        <button class="btn btn-warning btn-sm" value="0F44">設備週期查詢</button>
+        <button class="btn btn-warning btn-sm" value="5F40">設備模式查詢</button>
+        <button class="btn btn-warning btn-sm" value="0F43">設備韌體查詢</button>
+        <br>
+        <button class="btn btn-warning btn-sm" value="0F40">設備編號查詢</button>
+        <button class="btn btn-warning btn-sm" value="5045">行車倒數查詢</button>
+        <button class="btn btn-warning btn-sm" value="5044">行人倒數查詢</button>
+        <button class="btn btn-warning btn-sm" value="5F6F-1">燈態週期查詢</button>
+        <button class="btn btn-warning btn-sm" value="5F6F-2">步階週期查詢</button>
+        <br>
+    </div>
+    <div class="col-md-12 row" id="query_result" style="margin-top: 10px;"></div>
+</div>
+<div class="set_zone priority_zone">
+    <h4 style="font-weight: bold;">優先號誌功能</h4>
+    <p>對選擇的設備 啟動/停止 優先號誌功能，並設定行人、行車倒數開關。</p>
+    <table >
+        <col width="180">
+        <tr class='priority_active'>
+            <th>
+                <input type="number" placeholder="1-255 (分鐘) 0 為永久" min="0" max="255" >
+            </th>
+            <td>
+                <button class='btn btn-danger priority_active'>啟動優先號誌</button>
+            </td>
+        </tr>
+        <tr>
+            <th class="countdown ped_countdown" >
+                <span style="font-size:12pt;font-weight:bold;color:#669900;">行人倒數　</span>
+                <!--<select style="width:65px;font-size:12pt;font-weight:bold;">-->
+                    <!--<option value="0" selected="selected">on</option>-->
+                    <!--<option value="1">off</option>-->
+                <!--</select>-->
+                    <input class="bootstrap-switch bootstrap-switch-success" type="checkbox" name="my-checkbox" id="countdown_walker">
+            </th>
+            <td>
+                <button class='btn btn-danger countdown_walker'>上傳倒數設定</button>
+            </td>
+            </tr>
+        <tr>
+            <th class="countdown car_countdown" >
+                <span style="font-size:12pt;font-weight:bold;color:#FF3300;">行車倒數　</span>
+                <input class="bootstrap-switch bootstrap-switch-success" type="checkbox" name="my-checkbox" id="countdown_car">
+                <!--<select style="width:65px;font-size:12pt;font-weight:bold;">-->
+                    <!--<option value="0" selected="selected">on</option>-->
+                    <!--<option value="1">off</option>-->
+                <!--</select>-->
+            </th>
+            <td>
+                <button class='btn btn-danger countdown_car'>上傳倒數設定</button>
+            </td>
+        </tr>
+    </table>
+</div>
+<div class="set_zone normal_zone">
+    <h4 style="font-weight: bold;">一般設定功能</h4>
+    <p>對選擇的設備設定參數。設備編號: <span class="equipment_id">0000</span> <button class='btn btn-danger reset'style="margin-left:150px;">重新啟動設備</button></p>
+    <table >
+        <col width="100">
+        <tr class='set_password'>
+            <th colspan="2" style="width: 250px"><input type="number" placeholder="設備密碼"></th>
+            <td><button class='btn btn-danger set_password'>設備密碼設定</button></td>
+        </tr>
+        <tr class='set_period'>
+            <th colspan="2">
+                <!--<input type="number" placeholder="設備週期" min="1" max="5">-->
+                <form class="periodform">
+                    <input type="radio" name="period" value="1"> 1秒
+                    <input type="radio" name="period" value="2"> 2秒
+                    <input type="radio" name="period" value="3"> 5秒
+                    <input type="radio" name="period" value="4"> 1分鐘
+                    <input type="radio" name="period" value="5"> 5分鐘
+                </form>
+            </th>
+            <td><button class='btn btn-danger set_period'>設備週期設定</button></td>
+        </tr>
+        <tr class='set_light_cycle'>
+            <th colspan="2">
+                <!--<input type="number" placeholder="設備週期" min="1" max="5">-->
+                <form class="periodform_light">
+                    <input type="radio" name="period_light" value="1"> 1秒
+                    <input type="radio" name="period_light" value="2"> 2秒
+                    <input type="radio" name="period_light" value="3"> 5秒
+                    <input type="radio" name="period_light" value="4"> 1分鐘
+                    <input type="radio" name="period_light" value="5"> 5分鐘
+                </form>
+            </th>
+            <td><button class='btn btn-danger set_light_cycle'>燈態回傳週期設定</button></td>
+        </tr>
+        <tr class='set_step_cycle'>
+            <th colspan="2">
+                <!--<input type="number" placeholder="設備週期" min="1" max="5">-->
+                <form class="periodform_step">
+                    <input type="radio" name="period_step" value="1"> 1秒
+                    <input type="radio" name="period_step" value="2"> 2秒
+                    <input type="radio" name="period_step" value="3"> 5秒
+                    <input type="radio" name="period_step" value="4"> 1分鐘
+                    <input type="radio" name="period_step" value="5"> 5分鐘
+                </form>
+            </th>
+            <td><button class='btn btn-danger set_step_cycle'>步階回傳週期設定</button></td>
+        </tr>
+        <tr>
+            <th colspan="2">設定系統時間至控制器</th>
+            <td><button class='btn btn-danger set_date'>設備日期設定</button></td>
+        </tr>
+        <tr class='set_pattern'>
+            <th>
+                <select class="pattern_form">
+                    <option value="0">定時控制</option>
+                    <option value="1">動態控制</option>
+                    <option value="2">路口手動</option>
+                    <option value="4">中央手動</option>
+                    <option value="8">中央控制</option>
+                    <option value="16">時相控制</option>
+                    <option value="32">即時控制</option>
+                    <option value="64">觸動控制</option>
+                    <option value="128">特勤路線控制</option>
+                </select>
+            </th>
+            <th class="pattern_time"><input type="number" placeholder="1-255 (分鐘) 0 為永久" min="0" max="255"></th>
+            <td><button class='btn btn-danger set_pattern'>設備模式設定</button></td>
+        </tr>
+        <tr class="set_communication">
+            <th colspan="2">設定通訊裝置</th>
+            <td><button class='btn btn-danger set_communication'>通訊裝置</button></td>
+        </tr>
+    </table>
+</div>
+<div class="status">
+
+</div>

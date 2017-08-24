@@ -1,0 +1,145 @@
+table.table input:hover {
+	background-color: lightyellow;
+}
+
+body {
+	font-family: '微軟正黑體' !important;
+}
+
+.accordion-group .btn-primary:hover {
+	color:yellow !important;
+
+}
+
+/*.accordion .btn-primary {*/
+	/*font-size: 16pt !important;*/
+	/*font-weight:bold !important;*/
+/*}*/
+
+.device_connect_status label {
+	font-size: 12pt !important;
+	font-weight:bold !important;
+    /*align-content:center;*/
+    margin-left:50px;
+}
+
+/*.accordion-inner .btn {*/
+	/*font-weight:bold !important;*/
+	/*font-size: 12pt;*/
+/*}*/
+
+.brand {
+	font-size: 20pt !important;
+	font-weight:bold !important;
+}
+
+/*.btn.btn-success {*/
+	/*font-weight:bold !important;*/
+	/*font-size: 10pt;*/
+/*}*/
+
+.navbar-inner {
+	padding-right:0px;
+}
+
+.navbar .nav {
+	float:right !important;
+	margin-right:0px;
+}
+
+/*.btn {*/
+	/*font-weight: bold !important;*/
+    /*width: 50px;*/
+/*}*/
+
+body>table {
+	background-color: white !important;
+	box-shadow: 0px 0px 20px #202020;
+	border-radius: 5px 5px 0px 0px;
+	color: #303030;
+}
+
+html {
+	background-color: #DDDDDD;
+}
+
+.bottomInfo {
+	background-color: #EEEEEE;
+	box-shadow: #505050 0px 0px 20px inset;
+}
+
+.popover {
+	z-index: 100 !important;
+}
+
+tr.phase_details {
+	display: none;
+}
+
+table.table thead {
+	background-color: #f9f9f9;
+}
+
+/* 關閉 Input:Number 右側的 Spinner */
+input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* 將 Time Picker Style 略做修改 */
+div.bootstrap-timepicker-widget.dropdown-menu {
+	zoom: 1.4;
+}
+
+div.bootstrap-timepicker-widget.dropdown-menu table td {
+	border:none !important;
+}
+
+/* 自製日曆的樣式 */
+table.scalendar td,table.scalendar th {
+	height: 20px !important;
+	font-size: 12pt !important;	
+}
+table.scalendar th {
+	color: blue !important;
+	font-weight:bold !important;
+	background-color: #FFF4C9 !important;
+}
+table.scalendar th.theader {
+	color: white !important;
+	font-size: 20pt !important;
+}
+table.scalendar td:hover {
+	background-color: lightblue !important;
+	cursor: pointer !important;
+}
+table input[type=number] {
+	-webkit-transition: all .1s ease-out;
+}
+table input[type=number]:focus {
+	-webkit-transform: scale(1.5,1.5);
+	box-shadow: 0px 0px 3px #505050;
+	cursor: pointer !important;
+}
+/*.btn.active {*/
+	/*color:blue !important;*/
+/*}*/
+
+table.scalendar td {
+	padding: 0px !important;
+	height:40px !important;
+}
+
+table.scalendar td div {
+	height:40px !important;
+	line-height: 40px;
+	position: relative;
+}
+
+table.table-usergrid td,table.table-usergrid th {
+	font-size: 14pt !important;
+}
+
+/*div.btn-group-div-margin>div {*/
+	/*margin: 5px;*/
+/*}*/

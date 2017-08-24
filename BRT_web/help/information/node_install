@@ -1,0 +1,5 @@
+
+
+$ npm install passport
+
+npm install https://github.com/primus/primus/tarball/master

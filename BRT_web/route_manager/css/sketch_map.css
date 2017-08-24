@@ -1,0 +1,104 @@
+.width_100
+{
+    width: 100px;
+}
+.width_8
+{
+    width: 8px;
+}
+
+.height_30
+{
+    height: 30px;
+}
+.height_10
+{
+    height: 10px;
+}
+.height_80
+{
+    height: 80px;
+}
+.stopName
+{
+    width: 72px;
+    height: 105px;
+    padding-top: 5px;
+    font-size: 16px;
+    text-align: left;
+    overflow: hidden;
+    position: absolute;
+    left: -27px;
+    text-align:center
+}
+.center
+{
+    margin: 0 auto
+}
+.sfont
+{
+    font-size: 15px;
+}
+.fill
+{
+    background-color: #3333CC;
+    background-repeat: no-repeat;
+}
+.float_left
+{
+    float:left;
+}
+.float_right
+{
+    float:right;
+}
+.clear
+{
+    clear:both
+}
+.relative { position: relative}
+
+.icon_arrow_right, .icon_arrow_left, .stopIconEnd, .stopIconMRT, .icon_terminal
+{
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: -5px;
+}
+.icon_terminal {
+    background-image: url(../images/terminal.png);
+}
+.icon_arrow_right
+ {
+     background-image: url(../images/arrow_right.png);
+ }
+.icon_arrow_left
+{
+    background-image: url(../images/arrow_left.png);
+}
+.crossroad_div {
+    padding-top: 5px;
+    left: -27px;
+    position: relative;
+}
+.crossroad_select {
+    font-size: 12pt;
+    font-weight: bold;
+    width: 75px;
+}
+.route_map {
+    width: 708px;
+    margin: 0 auto;
+}
+.dotted_side
+{
+    height: 10px;
+    background-color: #990099;
+    background-repeat: no-repeat;
+}
+
+div.modal-body input {
+    margin-top:10px;
+}

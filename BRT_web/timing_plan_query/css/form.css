@@ -1,0 +1,101 @@
+
+tr.phase_details input{
+    padding:0px;
+    margin:0px;
+    width:100%;
+    border-width:0px;
+    height:100%;
+    font-size:14pt;
+    font-weight:bold;
+}
+
+tr.phase_details th{
+    font-weight:bold;
+    font-size:8pt;
+    padding-left:0px;
+    padding-right:0px;
+    text-align:center;
+}
+
+div.segment_type_modify table.special_type {
+    /*width:100%;*/
+    font-weight:bold;
+    font-size:14px;
+    background-color: #FBFBFB;
+}
+div.calendar table td{
+    text-align:center;
+}
+div.calendar table td div{
+    text-align:center;
+    font-weight:bold;
+    font-size:0.5cm;
+}
+
+div.calendar table th{
+    font-size:12pt;
+    text-align:center;
+}
+
+select.intersection {
+    font-size:12pt;
+    font-weight:bold;
+    width:800px;
+}
+
+ul.segment_type_modify div {
+    /*border: 2px solid red;*/
+    width: 65px;
+    float: left;
+    text-align: center;
+    /*position: absolute;*/
+    cursor: pointer;
+    font-weight:bold;
+    font-size:12pt;
+    /*padding: 20px 5px;*/
+    margin: 2px 5px;
+}
+
+div.segment_type_setting.domain button {
+    font-weight:bold;
+    font-size:12pt;
+}
+
+div.segment_type_setting.start  {
+    float:left;
+    position:relative;
+
+}
+
+div.segment_type_setting.end  {
+    display:none;
+    position:relative;
+    left:-110px;
+}
+
+div.segment_type_mark {
+    width: 5px;
+    font-size:7pt;
+    position:relative;
+    left:50px;
+    bottom: 30px;
+    padding:0;
+    margin:0;
+}
+
+div.segment_type_content {
+    float:left;
+    width: 55px;
+}
+
+option.error {
+    background-color:#FF8585;
+}
+
+option.error .success{
+    font-weight:bold;
+}
+
+
+
+

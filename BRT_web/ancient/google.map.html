@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- Safari -->
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <title>BRT performance</title>
+    <!-- JQuery -->
+    <script src="../lib/jquery-1.10.2.min.js"></script>
+    <!-- Google Map -->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <!--Bootstrap library-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="../lib/bootstrap-3.1.1-dist/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="../lib/bootstrap-3.1.1-dist/css/bootstrap-theme.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="../lib/bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+    <!--to display menu in right way we must apply this style-->
+    <link href="../device_manager/css/map_info.css" rel="stylesheet">
+
+</head>
+<body style="height:100%;padding:0px;margin:0px;overflow-y:scroll;min-width:1024px;width:1024px;margin:auto;">
+<!-- <body style="height:100%;padding:0px;margin:0px;overflow-y:scroll;min-width:1024px;width:100%;margin:auto;"> -->
+<!-- 上方的 modal 物件 -->
+<div class="top_stretch" style="position:fixed;width:100%;background-color:silver;opacity:0.5;z-index:100;">
+
+</div>
+<table>
+    <td id="centerview" style="vertical-align:top;width:750px">
+        <!-- page of content-->
+    </td>
+</table>
+<!--Include Javascript function-->
+<!--<script src="device_status/java_script/web_socket.js"></script>-->
+<!--<script src="device_status/java_script/data_reservoir.js"></script>-->
+<script src="google_map/java_script/map_draw.js"></script>
+<script src="google_map/java_script/map_manager.js"></script>
+<script src="google_map/java_script/main.js"></script>
+<script>
+    GoogleMapMain();
+</script>
+</body>
+</html>

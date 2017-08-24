@@ -1,0 +1,31 @@
+<div  ng-controller="ModalDemoCtrl" >
+    <script type="text/ng-template" id="myModalContent.html">
+        <div class="modal-header">
+            <h3 class="modal-title">新增路線</h3>
+        </div>
+        <div class="modal-body">
+            <form name="reviewForm" novalidate>
+                <input ng-model="review.name" type="text"   placeholder="請輸入路線名稱" required>
+                <input ng-model="review.color" type="color" style="width:50px" placeholder="請輸入路線顏色">
+                <input ng-model="review.intersection_max" type="number" placeholder="請輸入路口總數" min=1 required>
+                <!--<div>reviewForm is {{reviewForm.$valid}}</div>-->
+            </form>
+            <ul>
+                <li>名稱: <b>{{ review.name }} </b></li>
+                <li>顏色: <b>{{ review.color }} </b></li>
+                <li>路口數: <b>{{ review.intersection_max }}</b></li>
+            </ul>
+            <div class="alert alert-danger" ng-hide="is_valid">不是正確的輸入</div>
+        </div>
+        <div class="modal-footer" >
+            <!--<button id="samplegetbtn" ng-click="updateModel('POST', 'http://192.168.1.2:8888/route-manager', review)">Sample POST</button>-->
+            <button class="btn btn-primary" ng-click="ok(reviewForm.$valid)">確認</button>
+            <button class="btn btn-warning" ng-click="cancel()">取消</button>
+        </div>
+    </script>
+    <!--<button class="btn btn-default" ng-click="open()">Open me!</button>-->
+    <!--<button class="btn btn-default" ng-click="open('lg')">Large modal</button>-->
+    <button class="btn btn-danger" ng-click="DeleteRoute()" style="float:right;margin-left:50px">刪除路線</button>
+    <button class="btn btn-warning" ng-click="open('sm', CreateRoute)" style="float:right;">新增路線</button>
+    <!--<div ng-show="selected">Selection from a modal: {{ selected }}</div>-->
+</div>

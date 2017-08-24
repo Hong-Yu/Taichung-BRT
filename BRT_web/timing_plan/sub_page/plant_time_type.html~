@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<div style="position:relative;z-index:1;">\
+    <span class="btn btn-success" style="float:left;margin:3px;font-size:12pt;">新增時段</span>\
+    <!--span class="btn btn-success lcn_calculate" style="float:right;margin:3px;font-size:12pt;" data-toggle="button">行事曆</span-->\
+    <ul class="nav nav-tabs segtype_tab">\
+        <li class="active">\
+            <a style="cursor: pointer;" onclick="$(this).parent().parent().find(\'li\').attr(\'class\',\'\');$(this).parent().attr(\'class\',\'active\');"><span style="color:#303030;">平日(6)</span></a>\
+        </li>\
+        <li>\
+            <a style="cursor: pointer;" onclick="$(this).parent().parent().find(\'li\').attr(\'class\',\'\');$(this).parent().attr(\'class\',\'active\');"><span style="color:orangered;">例假日(7)</span></a>\
+        </li>\
+        <li>\
+            <a style="cursor: pointer;" onclick="$(this).parent().parent().find(\'li\').attr(\'class\',\'\');$(this).parent().attr(\'class\',\'active\');"><span style="color:brown;">特別日 1(8)</span></a>\
+        </li>\
+        <li>\
+            <a style="cursor: pointer;" onclick="$(this).parent().parent().find(\'li\').attr(\'class\',\'\');$(this).parent().attr(\'class\',\'active\');"><span style="color:darkgreen;">特別日 2(9)</span></a>\
+        </li>\
+    </ul>\
+    <div style="position:absolute;right:0px;top:0px;">\
+        <select class="span3" style="margin:2px;font-size:12pt;font-weight:bold;width:150px;">\
+            <option>忠明路口</option>\
+            <option>英才路口</option>\
+            <option>五權路口</option>\
+        </select>\
+    </div>\
+</div>\
+</body>
+</html>

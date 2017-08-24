@@ -1,0 +1,56 @@
+<!DOCTYPE html >
+<!--[if lt IE 7 ]> <html lang="en" class="ie6 ielt8"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="ie7 ielt8"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><! <html lang="en"> <![endif]-->
+<html ng-app="home.page.app">
+<head>
+    <meta charset="utf-8">
+    <title>Paper Stack</title>
+    <!--JQuery -->
+    <script src="lib/jquery-1.10.2.min.js"></script>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="lib/bootstrap-3.3.1-dist/css/bootstrap.min.css">
+    <script src="lib/bootstrap-3.3.1-dist/js/bootstrap.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="user_system/css/login.css" />
+    <link rel="stylesheet" type="text/css" href="user_system/css/style.css" />
+    <script type="text/javascript" src="lib/angular.js"></script>
+    <script type="text/javascript" src="user_system/java_script/ng-app.js"></script>
+    <script type="text/javascript" src="user_system/java_script/ng-http.js"></script>
+    <script type="text/javascript" src="user_system/java_script/functionality.js"></script>
+    <script type="text/javascript" src="user_system/java_script/ng-cookie.js"></script>
+</head>
+<body ng-controller="HomePageController" >
+<div align="center">
+    <img src="lib/Logo.png">
+    <div class="container login" ng-hide="http_service.sign_in_successful">
+        <section id="content">
+            <form action="">
+                <h1>BRT 快捷巴士系統</h1>
+                <h1>使用者登入</h1>
+                <div>
+                    <input type="text" placeholder="Username" required="" id="username" ng-model="user_data.email"/>
+                </div>
+                <div>
+                    <input type="password" placeholder="Password" required="" id="password" ng-model="user_data.password"/>
+                </div>
+                <pre class="alert alert-danger" ng-show="http_service.sign_in_error">帳號或密碼錯誤</pre>
+                <div>
+                    <input type="submit" value="登入" ng-click="SignIn(false)"/>
+                </div>
+            </form><!-- form -->
+            <div class="button">
+                <!--<a href="#">Download source file</a>-->
+            </div><!-- button -->
+        </section><!-- content -->
+    </div><!-- container -->
+
+
+
+
+    <main-canvas></main-canvas>
+
+</div>
+</body>
+</html>

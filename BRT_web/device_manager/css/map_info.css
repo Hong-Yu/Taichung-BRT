@@ -1,0 +1,33 @@
+.tool_bar {
+    position:relative;
+    z-index:11;
+    left:200px;
+    top:5px;
+}
+
+.tool_bar div {
+    font-weight:bold;
+}
+
+.google_map {
+    cursor:url("http://www.javascriptkit.com/dhtmltutors/cursor-hand.gif"), auto;
+}
+
+.dialogue_input_box {
+    visibility:hidden;
+    background:#ffffff;
+    border:1px solid #8888ff;
+    z-index:11;
+    position:relative;
+    width:220px;
+}
+
+table.coordinate td {
+    width:100px;
+    /*font-weight:bold;*/
+    text-align:center;
+}
+
+
+.gm-style-iw{ overflow: hidden !important;}
+

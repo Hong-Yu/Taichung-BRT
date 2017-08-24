@@ -1,0 +1,104 @@
+
+<div id="container" ng-show="http_service.sign_in_successful">
+<!--<div id="container" >-->
+    <div class="taskbar" style="background-color: white;height:20px;">
+        <span class="name" style='float:left;text-shadow:-2px 1px 1px black;color:lightgreen;'>導覽列</span>
+
+        <button class="sign_out btn btn-danger" style="font-weight:bold;float:right;width:50px;height:20px;padding:0;"
+                ng-click="SignOut()">登出</button>
+        <span style="font-weight:bold;float:right;width:130px;height:20px;padding:0;">user: {{user_data.email}}</span>
+        <ul class="nav nav-tabs nav-justified tab" style="font-weight:bold;float:right;width:300px;height:20px;padding:0;">
+            <li class="active" ><a href="#">首頁</a></li>
+            <li ><a href="#">-----</a></li>
+        </ul>
+    </div>
+    <div style="clear:both;"></div>
+
+    <div class="functionality">
+        <button type="button" class="btn btn-danger main_function" data-toggle="collapse" data-target="#functionOne" aria-expanded="true" aria-controls="demo">
+            BRT即時狀態
+        </button>
+
+        <div id="functionOne" class="collapse ">
+            <div ng-if="Permission('live_status')">
+                <button class="btn btn-info sub_function" onclick="sub_page_live_status();">即時狀態</button></div>
+            <div ng-if="Permission('live_status_sketch')">
+                <button class="btn btn-info sub_function" onclick="sub_page_live_status_sketch();">即時狀態-簡圖</button></div>
+            <div ng-if="Permission('time_space_diagram')">
+                <button class="btn btn-info sub_function" onclick="sub_page_time_space_diagram();">時空圖</button></div>
+        </div>
+
+        <button type="button" class="btn btn-danger main_function" data-toggle="collapse" data-target="#functionTwo" aria-expanded="true" aria-controls="demo">
+            設備連線狀態
+        </button>
+
+        <div id="functionTwo" class="collapse ">
+            <button class="btn btn-info sub_function" onclick="sub_page_device_status_map();"
+                    ng-show="Permission('device_status')" >連線狀態-地圖</button><br>
+            <button class="btn btn-info sub_function" onclick="sub_page_device_status_table();"
+                    ng-show="Permission('device_status_table')" >連線狀態-列表</button><br>
+        </div>
+
+        <button type="button" class="btn btn-danger main_function" data-toggle="collapse" data-target="#functionThree" aria-expanded="true" aria-controls="demo">
+            號誌時制規劃
+        </button>
+
+        <div id="functionThree" class="collapse ">
+            <button class="btn btn-info sub_function" onclick="sub_page_time_plan_query();"
+                    ng-show="Permission('timing_plan_query')" >查詢路口時制計畫</button><br>
+            <button class="btn btn-info sub_function" onclick="sub_page_time_plan_special();"
+                    ng-show="Permission('timing_plan')" >時制計畫設定</button><br>
+            <button class="btn btn-info sub_function" onclick="sub_page_device_control();"
+                    ng-show="Permission('device_control')" >控制器參數設定</button><br>
+            <button class="btn btn-info sub_function" onclick="sub_page_phase_modify();"
+                    ng-show="Permission('phase_modify')" >時相內容修改</button><br>
+            <button class="btn btn-info sub_function" onclick="sub_page_phase_lighting();"
+                    ng-show="Permission('phase_lighting')" >時相步階設定</button><br>
+        </div>
+
+        <div ng-if="Permission('brt_performance')">
+            <button type="button" class="btn btn-primary main_function" onclick="sub_page_brt_performance();">BRT績效</button>
+        </div>
+        <div ng-if="Permission('history')">
+            <button type="button" class="btn btn-primary main_function" onclick="sub_page_history();">歷史紀錄</button>
+        </div>
+        <div ng-if="Permission('intersection_info')">
+            <button type="button" class="btn btn-primary main_function" onclick="sub_page_info();">路口資訊</button>
+        </div>
+        <div ng-if="Permission('accident')">
+            <button type="button" class="btn btn-primary main_function" onclick="sub_page_accident();">事故顯示與建立</button>
+        </div>
+
+        <button type="button" class="btn btn-primary main_function" onclick="sub_page_device_manager();"
+                ng-show="Permission('device_manager')" >
+            路口設備管理
+        </button><br>
+
+        <button type="button" class="btn btn-primary main_function" onclick="sub_page_account_manager();"
+                ng-show="Permission('account_manager')" >
+            系統帳號管理
+        </button><br>
+
+        <button type="button" class="btn btn-primary main_function" onclick="sub_page_route_manager();"
+                ng-show="Permission('route_manager')" >
+            路線管理
+        </button><br>
+
+        <button type="button" class="btn btn-primary main_function" onclick="sub_page_scheduling();"
+                ng-show="Permission('scheduling')" >
+            排程管理
+        </button><br>
+
+        <button type="button" class="btn btn-warning main_function" onclick="sub_page_web_settings();"
+                ng-show="isDeveloper()" >
+            帳號權限設定
+        </button><br>
+
+
+    </div>
+    <div id="centerview">
+
+    </div>
+
+</div>
+

@@ -1,0 +1,47 @@
+div.query_zone {
+    background-color:#E8F9F1;
+    border-left:5px solid #009D50;
+    margin-left:5px;
+    padding-left:5px;
+    width: 795px;
+}
+/*E8F9F1*/
+/*D0EADC*/
+div.priority_zone {
+    background-color:#E0F0FF;
+    border-left:5px solid #3366FF;
+    margin-left:5px;
+    padding-left:5px
+}
+
+div.normal_zone {
+    background-color:#FFFFD4;
+    border-left:5px solid #FFB84D;
+    margin-left:5px;
+    padding-left:5px;
+}
+
+div.set_zone table th {
+    text-align:left;
+    width: 120px;
+}
+
+div.set_zone table td {
+    text-align:right;
+    padding-left:10px;
+    padding-bottom:10px;
+}
+
+div.intersection {
+    margin: 5px 25px;
+}
+
+div.intersection select{
+    width:750px;
+    font-size:12pt;
+    font-weight:bold;
+}
+div.q_result{
+    width: 250px;
+    margin: 0px;
+}

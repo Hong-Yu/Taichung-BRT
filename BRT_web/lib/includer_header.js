@@ -1,0 +1,1 @@
+$('head').append('<script type="text/javascript" src="http://code.createjs.com/createjs-2013.09.25.min.js" ></script>');

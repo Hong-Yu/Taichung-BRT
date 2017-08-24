@@ -1,0 +1,65 @@
+<account-modify-modal></account-modify-modal>
+<div ng-controller="AccountList">
+    <!--<div style="text-align:right;margin-bottom:10px;height:30px;">-->
+    <div class="account_list" ng-show="isPurpose('account_list')">
+        <button class="btn btn-warning sing_up"
+                ng-click="setPurpose('account_sign_up')">新增使用者</button>
+        <!--</div>-->
+        <table class="table table-bordered table-hover table-usergrid">
+            <thead>
+            <tr>
+                <th style="width:100px;text-align:center;">編號</th>
+                <th style="text-align:center;">帳號</th>
+                <th style="width:100px;text-align:center;">權限</th>
+                <th style="width:120px;text-align:center;">操作</th>
+            </tr>
+            </thead>
+            <tbody >
+            <tr ng-repeat="account in account_list">
+                <th style="text-align:right;">{{$index +1}}</th>
+                <td>{{account.email}}</td>
+                <td>{{Level(account.level)}}</td>
+                <td style="text-align:center;">
+                    <span  ng-controller="ModalDemoCtrl"  ng-click="open('sm', account, AccountUpdate)" class="btn btn-default btn-sm">修改</span>
+                    <span ng-click="AccountDelete(account.email)" class="btn btn-danger btn-sm">刪除</span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div ng-show="isPurpose('account_sign_up')">
+        <div class="col-sm-6 col-sm-offset-3">
+            <!-- show any messages that come back with authentication_raw -->
+            <div class="alert alert-danger authenticated_error" ng-hide="is_signup_successful">帳號已被使用</div>
+            <!-- LOGIN FORM -->
+            <form>
+                <div class="form-group">
+                    <label>帳號</label>
+                    <input ng-model="sign_up_data.email" type="text" class="form-control" >
+                </div>
+                <div class="form-group">
+                    <label>密碼</label>
+                    <input ng-model="sign_up_data.password" type="password" class="form-control" name="password">
+                </div>
+                <!-- Single button -->
+                <div class="btn-group administrator">
+                    <button
+                            type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        {{Level(sign_up_data.level)}} <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li ng-hide="isSignUpLevel(10)"><a href="#" ng-click="setSignUpLevel(10)">系統管理員</a></li>
+                        <li ng-hide="isSignUpLevel(1)"><a href="#" ng-click="setSignUpLevel(1)">一般使用者</a></li>
+                        <li ng-hide="isSignUpLevel(0)"><a href="#" ng-click="setSignUpLevel(0)">訪客</a></li>
+                    </ul>
+                </div>
+            </form>
+            <button ng-click="SignUp()"
+                    type="submit" class="btn btn-warning btn-sm confirm" style="float:right">新增</button>
+            <hr>
+
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+    function LocatePage()
+    {
+    window.location.assign("http://127.0.0.1:3000/books")
+    }
+    var MyPost = function () {
+        $.ajax({url:'/books.json',method:'post',data:{book:{title:'update by post'}},async:false,success:function(r,i,a){console.log(r,i,a)}})
+    }
+    </script>
+</head>
+<body>
+<script>
+    LocatePage();
+</script>
+<button>post</button>
+</body>
+</html>

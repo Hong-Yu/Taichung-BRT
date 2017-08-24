@@ -1,0 +1,25 @@
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+div.history_content th td{
+    width:80px;
+    text-align:center;
+    font-weight:bold;
+}
+
+div.time_start input.date {
+    float:left;
+    margin-top:32px;
+}
+
+div.time_start table {
+    float:left;
+}
+
+div.time_end input.date {
+    float:right;
+    margin-top:32px;
+}
+
+div.time_end table {
+    float:right;
+}

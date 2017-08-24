@@ -1,0 +1,13 @@
+Socket.readyState
+The readonly attribute readyState represents the state of the connection. It can have the following values:
+
+A value of 0 indicates that the connection has not yet been established.
+
+A value of 1 indicates that the connection is established and communication is possible.
+
+A value of 2 indicates that the connection is going through the closing handshake.
+
+A value of 3 indicates that the connection has been closed or could not be opened.
+
+Socket.bufferedAmount
+The readonly attribute bufferedAmount represents the number of bytes of UTF-8 text that have been queued using send() method.
